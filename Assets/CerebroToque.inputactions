@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "CerebroToque",
+    "maps": [
+        {
+            "name": "Toque",
+            "id": "34138729-a5f7-4ec0-8d09-e71d22df08d7",
+            "actions": [
+                {
+                    "name": "PrimeiroContato",
+                    "type": "Button",
+                    "id": "d3bf37e9-049b-4f46-9ad5-b38132b287b8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PrimeiraPos",
+                    "type": "Value",
+                    "id": "c12bff3b-aea7-4242-a5bc-6e2d407e83a1",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f1c7cb13-7e65-4c06-8c39-cb896a97b216",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrimeiroContato",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "16730fd6-e6f8-407d-88c9-b1510a989f97",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrimeiraPos",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
