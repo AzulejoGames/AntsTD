@@ -3,7 +3,7 @@ using UnityEngine;
 public class GeradorPorEvento : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
-    [SerializeField] private int quantidadeMax = 10;
+    [SerializeField] private int quantidadeMax = 11;
     [SerializeField]private int quantidadeNorm = 0;
 
     private Camera _cam;
