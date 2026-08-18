@@ -28,7 +28,7 @@ public class GeradorPorEvento : MonoBehaviour
             return;
         }
 
-        // Pega a posição onde o dedo está agora.
+       
         Vector2 screenPos = _input.PosicaoInput;
         Vector3 worldPos = _cam.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, _cam.nearClipPlane));
         worldPos.z = 0f;
