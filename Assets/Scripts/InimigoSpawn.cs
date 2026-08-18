@@ -1,58 +1,47 @@
 
 using UnityEngine;
-using System.Collections; // Necessário para Coroutines 
+using System.Collections;
+using UnityEngine.VFX; // Necessário para Coroutines 
 
 public class InimigoSpawn : MonoBehaviour
 {
-    // --- Início do Padrão Singleton --- 
-    public static InimigoSpawn Instance;
+    [SerializeField] private GameObject prefab;
+    [SerializeField] private int Maximo = 5;
+    [SerializeField] private int minimo = 0;
+    public float timeToSpawn = 3.0f;
 
-    void Awake()
+    private void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-
+        StartCoroutine(SpawnLoop());
     }
-    // --- Fim do Padrão Singleton --- 
-
-    [Header("Configurações do Spawner")]
-    public GameObject targetPrefab; // Arraste o Prefab do Alvo aqui 
-    public Transform[] spawnPoints; // Arraste todos os SpawnPoints aqui 
-
-    void Start()
+    IEnumerator SpawnLoop()
     {
-        if (targetPrefab == null || spawnPoints.Length == 0)
+        while (true)
         {
-            Debug.LogError("TargetSpawner não configurado!");
+            CriarObjeto();
+            yield return new WaitForSeconds(timeToSpawn);
+        }
+    }
+    private void CriarObjeto()
+    {
+       
+        if (minimo >= Maximo)
+        {
+            Debug.Log("LimiteAtingido");
             return;
         }
 
-        // --- Spawn Inicial ---
-        // Cria um alvo em cada ponto de spawn no início 
-        foreach (Transform point in spawnPoints)
-        {
-            Instantiate(targetPrefab, point.position, Quaternion.identity);
-        }
+
+        minimo++;
+
+        Vector2 spawnPosition = new Vector3(0f, 2f, 0f);
+        Quaternion spawnRotation = Quaternion.identity;
+        Instantiate(prefab   );
+
     }
-
-    // Método PÚBLICO que o alvo chamará antes de morrer 
-    public void TargetWasDestroyed()
+    public void ReduzirContador()
     {
-        // Usa uma Coroutine para o respawn não ser instantâneo 
-        StartCoroutine(RespawnTargetCoroutine());
-    }
-
-    IEnumerator RespawnTargetCoroutine()
-    {
-        yield return new WaitForSeconds(1f); // Espera 1 segundo]
-
-        // Sorteia um novo local da nossa lista 
-        int spawnIndex = Random.Range(0, spawnPoints.Length);
-        Transform spawnPoint = spawnPoints[spawnIndex];
-
-        // Cria o novo alvo 
-        Instantiate(targetPrefab, spawnPoint.position, Quaternion.identity);
+        if (minimo > 0)
+        { minimo--; }
     }
 }

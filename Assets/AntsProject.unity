@@ -255,9 +255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af08fc68e00bfd74f8691d2b6999ffa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InimigoSpawn
-  targetPrefab: {fileID: 8736133359909520379, guid: e7e3ff9c132e0594d836eb97edb74048, type: 3}
-  spawnPoints:
-  - {fileID: 686960086}
+  prefab: {fileID: 8736133359909520379, guid: e7e3ff9c132e0594d836eb97edb74048, type: 3}
+  Maximo: 5
+  minimo: 0
+  timeToSpawn: 3
 --- !u!1 &968183478
 GameObject:
   m_ObjectHideFlags: 0

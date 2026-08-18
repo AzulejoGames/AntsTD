@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class MunicaoBase : MonoBehaviour
 {
-    public GameObject gameObject;
+    public GameObject ela;
     void OnTriggerEnter2D(Collider2D colidiu)
     {
         if (colidiu.CompareTag("enemy"))
         {
-            Destroy(gameObject);
+            Destroy(ela);
             Debug.Log("morre");
         }
     }
