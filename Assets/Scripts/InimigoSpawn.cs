@@ -1,7 +1,7 @@
 
 using UnityEngine;
 using System.Collections;
-using UnityEngine.VFX; // Necessário para Coroutines 
+using UnityEngine.VFX; // Necessï¿½rio para Coroutines 
 
 public class InimigoSpawn : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class InimigoSpawn : MonoBehaviour
     [SerializeField] private int Maximo = 5;
     [SerializeField] private int minimo = 0;
     public float timeToSpawn = 3.0f;
+    public Transform spawnPoint;
 
     private void Start()
     {
@@ -34,10 +35,9 @@ public class InimigoSpawn : MonoBehaviour
 
         minimo++;
 
-        Vector2 spawnPosition = new Vector3(0f, 2f, 0f);
-        Quaternion spawnRotation = Quaternion.identity;
-        Instantiate(prefab   );
-
+        Vector2 spawnPosition = spawnPoint.position;
+        Quaternion spawnRotation = spawnPoint.rotation;
+        Instantiate(prefab, spawnPosition, spawnRotation);
     }
     public void ReduzirContador()
     {

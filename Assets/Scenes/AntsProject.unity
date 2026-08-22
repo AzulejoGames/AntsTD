@@ -211,6 +211,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &442346587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442346589}
+  - component: {fileID: 442346588}
+  m_Layer: 0
+  m_Name: Spawner_Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &442346588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442346587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af08fc68e00bfd74f8691d2b6999ffa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InimigoSpawn
+  prefab: {fileID: 1792474116762214061, guid: e7e3ff9c132e0594d836eb97edb74048, type: 3}
+  Maximo: 5
+  minimo: 0
+  timeToSpawn: 3
+  spawnPoint: {fileID: 686960086}
+--- !u!4 &442346589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442346587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.29393, y: 0.32199, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &686960085
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +269,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 686960086}
-  - component: {fileID: 686960087}
   m_Layer: 0
   m_Name: PontoI
   m_TagString: Untagged
@@ -237,28 +285,12 @@ Transform:
   m_GameObject: {fileID: 686960085}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: 0, z: 0}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1064805239}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &686960087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686960085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af08fc68e00bfd74f8691d2b6999ffa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InimigoSpawn
-  prefab: {fileID: 8736133359909520379, guid: e7e3ff9c132e0594d836eb97edb74048, type: 3}
-  Maximo: 5
-  minimo: 0
-  timeToSpawn: 3
 --- !u!1 &968183478
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +317,7 @@ Transform:
   m_GameObject: {fileID: 968183478}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -400,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeradorPorEvento
   prefab: {fileID: 3317142760951300056, guid: 46fd3c5b1b7cdf54e9dc9adfdfcb9ae2, type: 3}
-  quantidadeMax: 10
+  quantidadeMax: 5
   quantidadeNorm: 0
 --- !u!4 &1136250132
 Transform:
@@ -468,4 +500,5 @@ SceneRoots:
   - {fileID: 323178831}
   - {fileID: 1959034205}
   - {fileID: 1136250132}
+  - {fileID: 442346589}
   - {fileID: 1064805239}
