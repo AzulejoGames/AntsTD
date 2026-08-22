@@ -6,6 +6,8 @@ TagManager:
   tags:
   - base
   - enemy
+  - inimigo
+  - Torre
   layers:
   - Default
   - TransparentFX

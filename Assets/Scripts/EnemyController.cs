@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Transform pontoI;
     [SerializeField] private Transform pontoF;
     public GameObject inimigo;
+    [Tooltip("vidas do inimigo")]
+    [SerializeField] private int vidas = 3;
 
 
     void Start()
@@ -24,16 +26,18 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
 
-        // Lógica de Movimento
+       
         transform.Translate(Vector3.right * moveSpeed * Time.deltaTime); 
-
+      
     }
     void OnTriggerEnter2D(Collider2D colidiu)
     {
         if (colidiu.CompareTag("base"))
         {
+            Debug.Log("Inimigo chegou na base");
             Destroy(gameObject);
-            Debug.Log("Destruiu um inimigo");
+        
         }
     }
+
 }

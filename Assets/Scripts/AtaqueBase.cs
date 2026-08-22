@@ -4,9 +4,10 @@ using UnityEngine;
 public class AtaqueBase : MonoBehaviour
 {
  [SerializeField] private float moveSpeed = 3f;
- [SerializeField] private string AlvoTag = "inimigo";
+ 
  private Transform alvo;
  private Rigidbody2D rb;
+ public int dano = 1;
 
  void Awake()
     {
@@ -23,7 +24,7 @@ private void FixedUpdate()
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(AlvoTag))
+        if (collision.CompareTag("inimigo"))
         {
             alvo = collision.transform;
             Debug.Log("Alvo encontrado: "); 
@@ -32,10 +33,11 @@ private void FixedUpdate()
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag(AlvoTag))
+        if (collision.CompareTag("inimigo"))
         {
             alvo = null;
             Debug.Log("Alvo perdido: ");
         }
     }
+ 
 }

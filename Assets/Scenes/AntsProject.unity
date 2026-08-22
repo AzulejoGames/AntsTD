@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InimigoSpawn
   prefab: {fileID: 1792474116762214061, guid: e7e3ff9c132e0594d836eb97edb74048, type: 3}
-  Maximo: 5
+  Maximo: 2
   minimo: 0
   timeToSpawn: 3
   spawnPoint: {fileID: 686960086}
