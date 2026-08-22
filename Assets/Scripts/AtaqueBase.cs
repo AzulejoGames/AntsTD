@@ -7,7 +7,8 @@ public class AtaqueBase : MonoBehaviour
  
  private Transform alvo;
  private Rigidbody2D rb;
- public int dano = 1;
+ public int damage = 1;
+ 
 
  void Awake()
     {
@@ -29,6 +30,12 @@ private void FixedUpdate()
             alvo = collision.transform;
             Debug.Log("Alvo encontrado: "); 
         }
+         EnemyController inimigo = collision.GetComponent<EnemyController>();
+            if (inimigo != null)
+            {
+                inimigo.TakeDamage(damage);
+                Debug.Log("Inimigo atingido: " + damage + " de dano");
+            }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -39,5 +46,5 @@ private void FixedUpdate()
             Debug.Log("Alvo perdido: ");
         }
     }
- 
+  
 }

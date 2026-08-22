@@ -11,6 +11,14 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int vidas = 3;
 
 
+    public void TakeDamage(int damage)
+    {
+        vidas -= damage;
+        if (vidas <= 0)
+        {
+            Die();
+        }
+    }
     void Start()
     { }
 
@@ -38,6 +46,11 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         
         }
+    }
+   void Die()
+    {
+        Destroy(gameObject);
+        Debug.Log("Inimigo morreu");
     }
 
 }
