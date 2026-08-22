@@ -36,7 +36,7 @@ public class InimigoSpawn : MonoBehaviour
         minimo++;
 
         Vector2 spawnPosition = spawnPoint.position;
-        Quaternion spawnRotation = spawnPoint.rotation;
+        Quaternion spawnRotation = prefab.transform.rotation;
         Instantiate(prefab, spawnPosition, spawnRotation);
     }
     public void ReduzirContador()

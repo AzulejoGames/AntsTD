@@ -6,8 +6,5 @@ public class TrocaTela : MonoBehaviour
     {
         SceneManager.LoadScene(nomeDaCena);
     }
-    public void voltarMenu()
-    {
-        SceneManager.LoadScene("MenuT");
-    }
+   
 }
