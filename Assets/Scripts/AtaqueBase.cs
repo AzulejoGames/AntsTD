@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class AtaqueBase : MonoBehaviour
 {
+  
  [SerializeField] private float moveSpeed = 3f;
  
  private Transform alvo;

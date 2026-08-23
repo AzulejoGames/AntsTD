@@ -1,10 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class BaseHealth : MonoBehaviour
 {
-    [SerializeField] private string cenaGameOver = "GameOver";
+    
+    
+    
+    [Header("Configurações da base")]
+    
     [SerializeField] private int health = 10;
-
+    [SerializeField] private TMP_Text healthText;
+    [SerializeField] private string cenaGameOver = "GameOver";
+    public void  LateUpdate()
+    {
+        healthText.text = " vidas: " + health.ToString();
+        
+    }
  public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("inimigo"))
@@ -24,4 +35,5 @@ public class BaseHealth : MonoBehaviour
         Debug.Log("Base destruída!");
         SceneManager.LoadScene(cenaGameOver);
     }
+    
 }

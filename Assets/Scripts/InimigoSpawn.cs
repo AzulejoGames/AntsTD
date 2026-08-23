@@ -1,13 +1,15 @@
 
 using UnityEngine;
 using System.Collections;
-using UnityEngine.VFX; // Necess�rio para Coroutines 
+using UnityEngine.VFX; 
 
 public class InimigoSpawn : MonoBehaviour
 {
-
+    [Tooltip("Pontos de movimento do inimigo")]
       [SerializeField] private Transform pontoI;
      [SerializeField] private Transform pontoF;
+
+
      [Header("Prefab do inimigo a ser instanciado")]
     [SerializeField] private GameObject prefab;
     [SerializeField] private int Maximo = 5;

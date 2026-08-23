@@ -4,8 +4,8 @@ using UnityEngine.UIElements;
 public class EnemyController : MonoBehaviour
 {
    
-    [SerializeField] private float moveSpeed = 3f;
-  
+   
+    private GameManager gameManager;
     [Tooltip("vidas do inimigo")]
     [SerializeField] private int vidas = 3;
 
@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         
-        
+         gameManager = FindObjectOfType<GameManager>();
     }
 
     
@@ -44,8 +44,10 @@ public class EnemyController : MonoBehaviour
     }
    void Die()
     {
+        gameManager.InimigosCaiu();
         Destroy(gameObject);
         Debug.Log("Inimigo morreu");
+        
     }
 
 }
