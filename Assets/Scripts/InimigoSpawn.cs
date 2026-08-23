@@ -5,6 +5,10 @@ using UnityEngine.VFX; // Necess�rio para Coroutines
 
 public class InimigoSpawn : MonoBehaviour
 {
+
+      [SerializeField] private Transform pontoI;
+     [SerializeField] private Transform pontoF;
+     [Header("Prefab do inimigo a ser instanciado")]
     [SerializeField] private GameObject prefab;
     [SerializeField] private int Maximo = 5;
     [SerializeField] private int minimo = 0;
@@ -38,6 +42,12 @@ public class InimigoSpawn : MonoBehaviour
         Vector2 spawnPosition = spawnPoint.position;
         Quaternion spawnRotation = prefab.transform.rotation;
         Instantiate(prefab, spawnPosition, spawnRotation);
+
+        EnemyDirection enemyDirection = prefab.GetComponent<EnemyDirection>();
+        if (enemyDirection != null)
+        {
+            enemyDirection.ConfigurarPontos(pontoI, pontoF);
+        }
     }
     public void ReduzirContador()
     {
