@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2654133973771288341}
   - component: {fileID: 2138139774320540006}
   - component: {fileID: 1192766804787170600}
-  - component: {fileID: 2124643768456975315}
+  - component: {fileID: 738673739957640669}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: inimigo
@@ -108,7 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04358951b8a81934691ad40c753d205b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  moveSpeed: 2
   vidas: 3
 --- !u!50 &2138139774320540006
 Rigidbody2D:
@@ -192,7 +191,7 @@ PolygonCollider2D:
       - {x: 0.390625, y: -0.421875}
       - {x: 0.390625, y: 0.046875}
   m_UseDelaunayMesh: 1
---- !u!114 &2124643768456975315
+--- !u!114 &738673739957640669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

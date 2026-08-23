@@ -32,6 +32,7 @@ public class InimigoSpawn : MonoBehaviour
     private void CriarObjeto()
     {
        
+       Debug.Log($"Objeto gerador: '{gameObject.name}' | PontoF está: {pontoF}", gameObject);
         if (minimo >= Maximo)
         {
             Debug.Log("LimiteAtingido");
@@ -43,9 +44,10 @@ public class InimigoSpawn : MonoBehaviour
 
         Vector2 spawnPosition = spawnPoint.position;
         Quaternion spawnRotation = prefab.transform.rotation;
-        Instantiate(prefab, spawnPosition, spawnRotation);
+        
 
-        EnemyDirection enemyDirection = prefab.GetComponent<EnemyDirection>();
+        GameObject novoInimigo = Instantiate(prefab, spawnPosition, spawnRotation);
+        EnemyDirection enemyDirection = novoInimigo.GetComponent<EnemyDirection>();
         if (enemyDirection != null)
         {
             enemyDirection.ConfigurarPontos(pontoI, pontoF);
