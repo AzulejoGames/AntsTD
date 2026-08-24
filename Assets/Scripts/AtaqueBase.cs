@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 
 public class AtaqueBase : MonoBehaviour
@@ -24,12 +24,12 @@ private void FixedUpdate()
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+   private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("inimigo"))
+      if (collision.CompareTag("inimigo"))
         {
             alvo = collision.transform;
-            Debug.Log("Alvo encontrado: "); 
+            Debug.Log("Alvo encontrado: ");
         }
          EnemyController inimigo = collision.GetComponent<EnemyController>();
             if (inimigo != null)
@@ -39,13 +39,12 @@ private void FixedUpdate()
             }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("inimigo"))
-        {
-            alvo = null;
-            Debug.Log("Alvo perdido: ");
-        }
-    }
-  
+     private void OnTriggerExit2D(Collider2D collision)
+     {
+         if (collision.CompareTag("inimigo"))
+         {
+             Destroy(gameObject);
+         }
+     }
+
 }

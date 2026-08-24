@@ -2,38 +2,64 @@ using UnityEngine;
 
 public class EnemyDirection : MonoBehaviour
 {
-    //public GameObject enemyPrefab;
-     [SerializeField] private float moveSpeed = 3f;
-    [SerializeField] private Transform pontoI;
-    [SerializeField] private Transform pontoF;
-  
+    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] private Transform[] pontosCaminho; // Suporta 2 ou mais pontos!
+
+    private int indicePontoAtual = 0;
+
+    // Método para receber o array de pontos do Spawner
+    public void ConfigurarPontos(Transform[] novosPontos)
+    {
+        pontosCaminho = novosPontos;
+        indicePontoAtual = 0;
+        ValidarPontos();
+    }
+
+    // Sobrecarga mantida para compatibilidade (caso envie só inicio e fim)
     public void ConfigurarPontos(Transform pontoInicial, Transform pontoFinal)
     {
-        pontoI = pontoInicial;
-        pontoF = pontoFinal;
-        onEnimy();
+        pontosCaminho = new Transform[] { pontoInicial, pontoFinal };
+        indicePontoAtual = 0;
+        ValidarPontos();
     }
-   public void onEnimy()
+
+    private void ValidarPontos()
     {
-        if (pontoI == null)
+        if (pontosCaminho == null || pontosCaminho.Length == 0)
         {
-            Debug.LogError("Ponto inicial não atribuído no EnemyController.");
-        }
-        if (pontoF == null)
-        {
-            Debug.LogError("Ponto final não atribuído no EnemyController.");
+            Debug.LogError("Nenhum ponto de caminho foi atribuído ao EnemyDirection!", gameObject);
         }
     }
+
     void Update()
     {
-        if (pontoF == null)return;
-        
-         transform.position = Vector2.MoveTowards(transform.position, pontoF.position, moveSpeed * Time.deltaTime);
-        
-      if(Vector2.Distance(transform.position, pontoF.position) < 0.1f)
+        // Se não tiver pontos ou se já percorreu todos os pontos, interrompe o movimento
+        if (pontosCaminho == null || indicePontoAtual >= pontosCaminho.Length) return;
+
+        Transform pontoAlvo = pontosCaminho[indicePontoAtual];
+
+        if (pontoAlvo == null) return;
+
+        // Move o inimigo em direção ao ponto alvo atual
+        transform.position = Vector2.MoveTowards(transform.position, pontoAlvo.position, moveSpeed * Time.deltaTime);
+
+        // Verifica se chegou próximo do ponto alvo atual
+        if (Vector2.Distance(transform.position, pontoAlvo.position) < 0.1f)
         {
-            Debug.Log("Inimigo chegou no ponto final");
+            indicePontoAtual++; // Avança para o próximo ponto da lista
+
+            // Se o novo índice for igual ou maior que a quantidade de pontos, chegou ao final da rota
+            if (indicePontoAtual >= pontosCaminho.Length)
+            {
+                ChegouAoFinal();
+            }
         }
     }
-  
+
+    private void ChegouAoFinal()
+    {
+        Debug.Log("Inimigo chegou no ponto final do caminho!");
+        // AQUI: Lógica de causar dano na base e se destruir
+        Destroy(gameObject);
+    }
 }

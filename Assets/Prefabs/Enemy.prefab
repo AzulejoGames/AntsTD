@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2066783529673393027}
   - component: {fileID: 2654133973771288341}
   - component: {fileID: 2138139774320540006}
-  - component: {fileID: 1192766804787170600}
   - component: {fileID: 738673739957640669}
-  m_Layer: 0
+  - component: {fileID: 4135910067890417826}
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -136,8 +136,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &1192766804787170600
-PolygonCollider2D:
+--- !u!114 &738673739957640669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6353693256137524337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9730ccf388272f926831544dfe7a9cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDirection
+  moveSpeed: 3
+  pontoI: {fileID: 0}
+  pontoF: {fileID: 0}
+--- !u!61 &4135910067890417826
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -173,39 +188,15 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.78125, y: 0.84375}
-    newSize: {x: 1, y: 0.8828125}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.234375, y: 0.359375}
-      - {x: 0.140625, y: 0.421875}
-      - {x: -0.203125, y: 0.421875}
-      - {x: -0.296875, y: 0.203125}
-      - {x: -0.390625, y: 0.046875}
-      - {x: -0.390625, y: -0.421875}
-      - {x: 0.390625, y: -0.421875}
-      - {x: 0.390625, y: 0.046875}
-  m_UseDelaunayMesh: 1
---- !u!114 &738673739957640669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6353693256137524337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9730ccf388272f926831544dfe7a9cad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDirection
-  moveSpeed: 3
-  pontoI: {fileID: 0}
-  pontoF: {fileID: 0}
+  m_Size: {x: 0.8, y: 0.8}
+  m_EdgeRadius: 0
 --- !u!1 &8684802651229940323
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +208,7 @@ GameObject:
   - component: {fileID: 3920287918666955838}
   - component: {fileID: 2685057457650660913}
   - component: {fileID: 1721443436394742433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: antlionwalkingcycle_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
