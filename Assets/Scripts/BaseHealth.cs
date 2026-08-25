@@ -11,6 +11,7 @@ public class BaseHealth : MonoBehaviour
     [SerializeField] private int health = 10;
     [SerializeField] private TMP_Text healthText;
     [SerializeField] private string cenaGameOver = "GameOver";
+    public int pontos = 0;
     public void  LateUpdate()
     {
         healthText.text = " vidas: " + health.ToString();

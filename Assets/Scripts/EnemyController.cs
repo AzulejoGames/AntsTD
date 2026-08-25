@@ -1,14 +1,27 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
-   
-   
     private GameManager gameManager;
+
     [Tooltip("vidas do inimigo")]
     [SerializeField] private int vidas = 3;
+    public int pontosGanhos = 10;
 
+    [Tooltip("Arraste o objeto com o BaseHealth para cá ou deixe o script encontrar na cena")]
+    public BaseHealth baseAlvo;
+
+    void Start()
+    {
+        // Encontra o GameManager na cena
+        gameManager = FindFirstObjectByType<GameManager>();
+
+        // Caso baseAlvo não tenha sido atribuída no Inspector, procura na cena automaticamente
+        if (baseAlvo == null)
+        {
+            baseAlvo = FindFirstObjectByType<BaseHealth>();
+        }
+    }
 
     public void TakeDamage(int damage)
     {
@@ -18,36 +31,35 @@ public class EnemyController : MonoBehaviour
             Die();
         }
     }
-    void Start()
-    {
-        
-         gameManager = FindObjectOfType<GameManager>();
-    }
 
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-
-       
-   
-    }
     void OnTriggerEnter2D(Collider2D colidiu)
     {
         if (colidiu.CompareTag("base"))
         {
             Debug.Log("Inimigo chegou na base");
             Destroy(gameObject);
-        
         }
     }
-   void Die()
-    {
-        gameManager.InimigosCaiu();
-        Destroy(gameObject);
-        Debug.Log("Inimigo morreu");
-        
-    }
 
+    void Die()
+    {
+        // Adiciona os pontos ao script BaseHealth se a referência existir
+        if (baseAlvo != null)
+        {
+            baseAlvo.pontos += pontosGanhos;
+            Debug.Log("Pontos adicionados à base. Pontos atuais: " + baseAlvo.pontos);
+        }
+        else
+        {
+            Debug.LogWarning("BaseHealth não encontrado pelo inimigo!");
+        }
+
+        if (gameManager != null)
+        {
+            gameManager.InimigosCaiu();
+        }
+
+        Debug.Log("Inimigo morreu");
+        Destroy(gameObject);
+    }
 }
