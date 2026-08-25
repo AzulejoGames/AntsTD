@@ -9,8 +9,9 @@ public class WaveSpawner : MonoBehaviour
     {
         public string nomeDaOnda = "Onda 1";
         public GameObject prefabInimigo;  // Qual inimigo vai nascer nesta onda
-        public int quantidade = 5;         // Quantidade de inimigos na onda
-        public float taxaDeSpawn = 1f;     // Inimigos por segundo
+       
+       public int quantidade = 5;         // Quantidade de inimigos na onda
+       public float taxaDeSpawn = 1f;     // Inimigos por segundo
     }
 
     [Header("Configurações das Ondas")]

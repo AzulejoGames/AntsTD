@@ -21,6 +21,16 @@ private void FixedUpdate()
         {
            Vector2 direcao = (alvo.position - transform.position).normalized;
         rb.MovePosition(rb.position + direcao * moveSpeed * Time.fixedDeltaTime);
+
+
+        float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+            
+            // Se o sprite original apontar para BAICHO (como no seu vídeo), adicione +90f.
+            // Se apontar para CIMA, subtraia -90f.
+            rb.rotation = angulo - 90f; 
+
+            // Movimento
+            rb.MovePosition(rb.position + direcao * moveSpeed * Time.fixedDeltaTime);
         }
     }
 

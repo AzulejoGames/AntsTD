@@ -25,6 +25,9 @@ public class Torre : MonoBehaviour
 
         if (alvoAtual == null) return;
 
+Vector2 direcao = (alvoAtual.position - transform.position).normalized;
+    float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+    transform.rotation = Quaternion.Euler(0, 0, angulo - 90f); // Ajuste o -90f se necessário
         if (temporizadorTiro <= 0f)
         {
             Atirar();

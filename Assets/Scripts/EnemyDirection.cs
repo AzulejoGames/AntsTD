@@ -39,7 +39,15 @@ public class EnemyDirection : MonoBehaviour
         Transform pontoAlvo = pontosCaminho[indicePontoAtual];
 
         if (pontoAlvo == null) return;
+        
+// --- ROTAÇÃO AQUI ---
+    // 1. Calcula a direção em relação ao ponto atual do caminho
+    Vector2 direcao = (pontoAlvo.position - transform.position).normalized;
 
+    // 2. Calcula o ângulo e aplica a rotação (ajuste com -90f ou +90f dependendo do sprite)
+    float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+    transform.rotation = Quaternion.Euler(0, 0, angulo + 60f);
+    // --------------------
         // Move o inimigo em direção ao ponto alvo atual
         transform.position = Vector2.MoveTowards(transform.position, pontoAlvo.position, moveSpeed * Time.deltaTime);
 
