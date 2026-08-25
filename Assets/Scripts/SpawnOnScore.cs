@@ -13,6 +13,7 @@ public class SpawnOnScore : MonoBehaviour
     [Tooltip("Referência para o script BaseHealth onde ficam os pontos.")]
     public BaseHealth baseHealth;
 
+ private bool jaInstanciou = false; // Trava para evitar chamadas duplicadas
     private void Start()
     {
         // Se a baseHealth não foi arrastada no Inspector, procura na cena automaticamente
@@ -24,6 +25,8 @@ public class SpawnOnScore : MonoBehaviour
 
     private void Update()
     {
+        if (jaInstanciou || baseHealth == null) return;
+
         VerificarPontuacao();
     }
 
@@ -47,6 +50,7 @@ public class SpawnOnScore : MonoBehaviour
 
     private void SpawnEPartir()
     {
+        
         if (objetoYPrefab != null)
         {
             // Instancia o objeto Y na mesma posição e rotação deste objeto

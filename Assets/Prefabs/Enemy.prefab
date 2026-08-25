@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5773249955589144758}
   - component: {fileID: 2066783529673393027}
   - component: {fileID: 2654133973771288341}
-  - component: {fileID: 2138139774320540006}
   - component: {fileID: 738673739957640669}
+  - component: {fileID: 2138139774320540006}
   - component: {fileID: 4135910067890417826}
   m_Layer: 6
   m_Name: Enemy
@@ -108,7 +108,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04358951b8a81934691ad40c753d205b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  vidas: 3
+  vidas: 2
+  pontosGanhos: 10
+  baseAlvo: {fileID: 0}
+--- !u!114 &738673739957640669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6353693256137524337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9730ccf388272f926831544dfe7a9cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDirection
+  moveSpeed: 3
+  pontosCaminho: []
 --- !u!50 &2138139774320540006
 Rigidbody2D:
   serializedVersion: 5
@@ -135,22 +151,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &738673739957640669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6353693256137524337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9730ccf388272f926831544dfe7a9cad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDirection
-  moveSpeed: 3
-  pontoI: {fileID: 0}
-  pontoF: {fileID: 0}
+  m_Constraints: 4
 --- !u!61 &4135910067890417826
 BoxCollider2D:
   m_ObjectHideFlags: 0
