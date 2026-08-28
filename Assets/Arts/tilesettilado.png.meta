@@ -1,47 +1,49 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 5f81d445784647e4eba2c132b961498a
-=======
-guid: becf072f303bba9dcb83abb8359c4d62
->>>>>>> 89a5e24 (melhorei o tilemap)
+guid: 57616ebd64d045e59a7ae53eb0d82d55
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6759036517657070204
-    second: tileset melhorado_0
+      213: 1020201558131002661
+    second: tilesettilado_0
   - first:
-      213: 7202529615324433734
-    second: tileset melhorado_1
+      213: 349725918274904703
+    second: tilesettilado_1
   - first:
-      213: 1082793313197967013
-    second: tileset melhorado_2
+      213: 8372965468610384518
+    second: tilesettilado_2
   - first:
-      213: 6363292310390900426
-    second: tileset melhorado_3
+      213: -2181035066688953030
+    second: tilesettilado_3
   - first:
-      213: 5310317160003012002
-    second: tileset melhorado_4
+      213: -781097414594077599
+    second: tilesettilado_4
   - first:
-      213: -7067633703630460018
-    second: tileset melhorado_5
+      213: 3610799834396418948
+    second: tilesettilado_5
   - first:
-      213: 2214473918912202212
-    second: tileset melhorado_6
+      213: -2214767535595777150
+    second: tilesettilado_6
   - first:
-      213: 8978281529674241861
-    second: tileset melhorado_7
+      213: 5736682482639515824
+    second: tilesettilado_7
   - first:
-      213: -3010851006116911025
-    second: tileset melhorado_8
+      213: -5571438153561534449
+    second: tilesettilado_8
   - first:
-      213: 2773590411449639347
-    second: tileset melhorado_9
+      213: 7597278881623924726
+    second: tilesettilado_9
   - first:
-      213: 1549121925815110465
-    second: tileset melhorado_10
+      213: 3480556762906627860
+    second: tilesettilado_10
   - first:
-      213: 4364378987162187762
-    second: tileset melhorado_11
+      213: 7629831621939369422
+    second: tilesettilado_11
+  - first:
+      213: 2785879919519106624
+    second: tilesettilado_12
+  - first:
+      213: -2024122652950884726
+    second: tilesettilado_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -74,11 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: 1
-=======
-    filterMode: 0
->>>>>>> 89a5e24 (melhorei o tilemap)
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -92,11 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 100
-=======
   spritePixelsToUnits: 30
->>>>>>> 89a5e24 (melhorei o tilemap)
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -171,7 +165,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tileset melhorado_0
+      name: tilesettilado_0
       rect:
         serializedVersion: 2
         x: 0
@@ -186,14 +180,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7ac7d2e6ebeccd50800000000000000
-      internalID: 6759036517657070204
+      spriteID: 52dc2bf69eb782e00800000000000000
+      internalID: 1020201558131002661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_1
+      name: tilesettilado_1
       rect:
         serializedVersion: 2
         x: 0
@@ -208,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64dc4a5468684f360800000000000000
-      internalID: 7202529615324433734
+      spriteID: f72e587aed97ad400800000000000000
+      internalID: 349725918274904703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_2
+      name: tilesettilado_2
       rect:
         serializedVersion: 2
         x: 32
@@ -230,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a6455e08cad60f00800000000000000
-      internalID: 1082793313197967013
+      spriteID: 68252295bbfb23470800000000000000
+      internalID: 8372965468610384518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_3
+      name: tilesettilado_3
       rect:
         serializedVersion: 2
         x: 32
@@ -252,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac603d264a4fe4850800000000000000
-      internalID: 6363292310390900426
+      spriteID: a35a55799286bb1e0800000000000000
+      internalID: -2181035066688953030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_4
+      name: tilesettilado_4
       rect:
         serializedVersion: 2
         x: 65
@@ -274,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a504ae525902b940800000000000000
-      internalID: 5310317160003012002
+      spriteID: 16cd4243a0cf825f0800000000000000
+      internalID: -781097414594077599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_5
+      name: tilesettilado_5
       rect:
         serializedVersion: 2
         x: 65
@@ -296,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8b278ca798baed90800000000000000
-      internalID: -7067633703630460018
+      spriteID: 483ec3c81532c1230800000000000000
+      internalID: 3610799834396418948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_6
+      name: tilesettilado_6
       rect:
         serializedVersion: 2
         x: 98
@@ -318,14 +312,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e50125eb446bbe10800000000000000
-      internalID: 2214473918912202212
+      spriteID: 2831fb429a09341e0800000000000000
+      internalID: -2214767535595777150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_7
+      name: tilesettilado_7
       rect:
         serializedVersion: 2
         x: 98
@@ -340,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5471fa57b73499c70800000000000000
-      internalID: 8978281529674241861
+      spriteID: 0b03feed25acc9f40800000000000000
+      internalID: 5736682482639515824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_8
+      name: tilesettilado_8
       rect:
         serializedVersion: 2
         x: 131
@@ -362,14 +356,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4826cc46fe4736d0800000000000000
-      internalID: -3010851006116911025
+      spriteID: f0018e0a4864ea2b0800000000000000
+      internalID: -5571438153561534449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_9
+      name: tilesettilado_9
       rect:
         serializedVersion: 2
         x: 131
@@ -384,17 +378,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b1a2eab8c5cd7620800000000000000
-      internalID: 2773590411449639347
+      spriteID: 6ff55c604e4fe6960800000000000000
+      internalID: 7597278881623924726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_10
+      name: tilesettilado_10
       rect:
         serializedVersion: 2
         x: 164
+        y: 32
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f02a16feb6d4030800000000000000
+      internalID: 3480556762906627860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesettilado_11
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec51db18f6b92e960800000000000000
+      internalID: 7629831621939369422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesettilado_12
+      rect:
+        serializedVersion: 2
+        x: 197
         y: 32
         width: 33
         height: 33
@@ -406,17 +444,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14b8af51f269f7510800000000000000
-      internalID: 1549121925815110465
+      spriteID: 04684ddc60f69a620800000000000000
+      internalID: 2785879919519106624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset melhorado_11
+      name: tilesettilado_13
       rect:
         serializedVersion: 2
-        x: 164
+        x: 197
         y: 0
         width: 33
         height: 33
@@ -428,8 +466,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f73bfab093619c30800000000000000
-      internalID: 4364378987162187762
+      spriteID: a8e8a01eb2fd8e3e0800000000000000
+      internalID: -2024122652950884726
       vertices: []
       indices: 
       edges: []
@@ -448,18 +486,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tileset melhorado_0: 6759036517657070204
-      tileset melhorado_1: 7202529615324433734
-      tileset melhorado_10: 1549121925815110465
-      tileset melhorado_11: 4364378987162187762
-      tileset melhorado_2: 1082793313197967013
-      tileset melhorado_3: 6363292310390900426
-      tileset melhorado_4: 5310317160003012002
-      tileset melhorado_5: -7067633703630460018
-      tileset melhorado_6: 2214473918912202212
-      tileset melhorado_7: 8978281529674241861
-      tileset melhorado_8: -3010851006116911025
-      tileset melhorado_9: 2773590411449639347
+      tilesettilado_0: 1020201558131002661
+      tilesettilado_1: 349725918274904703
+      tilesettilado_10: 3480556762906627860
+      tilesettilado_11: 7629831621939369422
+      tilesettilado_12: 2785879919519106624
+      tilesettilado_13: -2024122652950884726
+      tilesettilado_2: 8372965468610384518
+      tilesettilado_3: -2181035066688953030
+      tilesettilado_4: -781097414594077599
+      tilesettilado_5: 3610799834396418948
+      tilesettilado_6: -2214767535595777150
+      tilesettilado_7: 5736682482639515824
+      tilesettilado_8: -5571438153561534449
+      tilesettilado_9: 7597278881623924726
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
