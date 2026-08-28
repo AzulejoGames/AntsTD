@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8647051939265921304}
   - component: {fileID: 5976975371487421079}
   - component: {fileID: 3216991240292973882}
-  - component: {fileID: 561215391588108348}
   - component: {fileID: 7903751861027435068}
   - component: {fileID: 3519070556490602}
   - component: {fileID: 722789306363155462}
@@ -123,18 +122,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &561215391588108348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3317142760951300056}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0091f8250af492040a4504cf226329ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MunicaoBase
 --- !u!114 &7903751861027435068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +180,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!95 &722789306363155462
 Animator:

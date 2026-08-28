@@ -53,7 +53,7 @@ private void FixedUpdate()
      {
          if (collision.CompareTag("inimigo"))
          {
-             Destroy(gameObject);
+            //Destroy(gameObject);
          }
      }
 

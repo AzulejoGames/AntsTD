@@ -13,10 +13,10 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
-        // Encontra o GameManager na cena
+       
         gameManager = FindFirstObjectByType<GameManager>();
 
-        // Caso baseAlvo não tenha sido atribuída no Inspector, procura na cena automaticamente
+  
         if (baseAlvo == null)
         {
             baseAlvo = FindFirstObjectByType<BaseHealth>();
@@ -43,7 +43,7 @@ public class EnemyController : MonoBehaviour
 
     void Die()
     {
-        // Adiciona os pontos ao script BaseHealth se a referência existir
+        
         if (baseAlvo != null)
         {
             baseAlvo.pontos += pontosGanhos;
