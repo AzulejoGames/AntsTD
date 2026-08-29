@@ -1,9 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 5f81d445784647e4eba2c132b961498a
-=======
+
 guid: becf072f303bba9dcb83abb8359c4d62
->>>>>>> 89a5e24 (melhorei o tilemap)
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -74,11 +71,8 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: 1
-=======
+  
     filterMode: 0
->>>>>>> 89a5e24 (melhorei o tilemap)
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -92,11 +86,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 100
-=======
+  
   spritePixelsToUnits: 30
->>>>>>> 89a5e24 (melhorei o tilemap)
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
