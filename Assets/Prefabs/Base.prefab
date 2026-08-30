@@ -134,6 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18025b99e1620f4359335458ddf0d42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueBase
+  tempoDeVida: 15
+  tempoAcabou: 0
   moveSpeed: 2
   damage: 1
 --- !u!61 &3519070556490602

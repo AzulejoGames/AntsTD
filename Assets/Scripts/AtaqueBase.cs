@@ -4,6 +4,9 @@
 public class AtaqueBase : MonoBehaviour
 {
   
+  [Tooltip("configuraçoes de formiga")]
+[SerializeField] private float tempoDeVida = 10f;
+public bool tempoAcabou = false;
  [SerializeField] private float moveSpeed = 3f;
  
  private Transform alvo;
@@ -25,13 +28,26 @@ private void FixedUpdate()
 
         float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
             
-            // Se o sprite original apontar para BAICHO (como no seu vídeo), adicione +90f.
-            // Se apontar para CIMA, subtraia -90f.
+        
             rb.rotation = angulo - 90f; 
 
             // Movimento
             rb.MovePosition(rb.position + direcao * moveSpeed * Time.fixedDeltaTime);
         }
+    }
+    private void Update()
+    {
+        if(!tempoAcabou)
+        {
+            
+            tempoDeVida -= Time.deltaTime;
+        if (tempoDeVida <= 0f)
+        {
+            tempoAcabou = true;
+            BaseDie();
+        }
+        }
+        
     }
 
    private void OnTriggerEnter2D(Collider2D collision)
@@ -53,8 +69,14 @@ private void FixedUpdate()
      {
          if (collision.CompareTag("inimigo"))
          {
-            //Destroy(gameObject);
+                alvo = null;
+                Debug.Log("Alvo perdido");
          }
      }
+    void BaseDie()
+    {
+        Destroy(gameObject);
+        Debug.Log("Ataque da base destruído após o tempo de vida");
+    }
 
 }
