@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04358951b8a81934691ad40c753d205b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  vidas: 3
+  vidas: 5
   pontosGanhos: 5
   baseAlvo: {fileID: 0}
 --- !u!114 &738673739957640669

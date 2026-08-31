@@ -1,14 +1,16 @@
 using System.Collections;
 using UnityEngine;
-
+using TMPro;
 public class WaveSpawner : MonoBehaviour
 {
+    [SerializeField] private TMP_Text WaveTimeText;
+    private bool CronometroATivo = true;
     // Estrutura para configurar cada onda individualmente no Inspector
     [System.Serializable]
     public class Wave
     {
         public string nomeDaOnda = "Onda 1";
-        public GameObject prefabInimigo;  // Qual inimigo vai nascer nesta onda
+        public GameObject prefabInimigo;  
        
        public int quantidade = 5;         // Quantidade de inimigos na onda
        public float taxaDeSpawn = 1f;     // Inimigos por segundo
@@ -23,18 +25,36 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private Transform[] pontosCaminho; // Lista de waypoints (2 ou mais pontos!)
 
     private int indiceOndaAtual = 0;
+    private float cronometroRegressa;
 
     void Start()
     {
         StartCoroutine(GerenciarOndas());
+       
+
     }
+   
 
     private IEnumerator GerenciarOndas()
     {
         while (indiceOndaAtual < ondas.Length)
         {
+            cronometroRegressa = tempoEntreOndas;
+
             Debug.Log($"Aguardando {tempoEntreOndas}s para iniciar: {ondas[indiceOndaAtual].nomeDaOnda}");
-            yield return new WaitForSeconds(tempoEntreOndas);
+            while (cronometroRegressa > 0) 
+            {
+                AtualizarUi();
+                yield return new WaitForSeconds(1f);
+                cronometroRegressa --;
+
+              
+
+
+
+            }
+            cronometroRegressa = 0;
+            AtualizarUi();
 
             // Inicia e aguarda a onda atual ser completamente gerada
             yield return StartCoroutine(SpawnarOnda(ondas[indiceOndaAtual]));
@@ -76,4 +96,11 @@ public class WaveSpawner : MonoBehaviour
             Debug.LogWarning("O inimigo instanciado não possui o componente 'EnemyDirection'!", novoInimigo);
         }
     }
+
+    void AtualizarUi()
+    {
+        // Exibe o cronômetro sem casas decimais (números inteiros) para melhor leitura na UI
+        WaveTimeText.text = $"Tempo entre Ondas: {Mathf.CeilToInt(cronometroRegressa)} segundos";
+    }
+
 }
