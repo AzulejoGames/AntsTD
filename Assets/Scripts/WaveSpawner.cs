@@ -4,6 +4,7 @@ using TMPro;
 public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private TMP_Text WaveTimeText;
+    [SerializeField] private TMP_Text quantidadeWaves;
     private bool CronometroATivo = true;
     // Estrutura para configurar cada onda individualmente no Inspector
     [System.Serializable]
@@ -49,9 +50,6 @@ public class WaveSpawner : MonoBehaviour
                 cronometroRegressa --;
 
               
-
-
-
             }
             cronometroRegressa = 0;
             AtualizarUi();
@@ -62,6 +60,7 @@ public class WaveSpawner : MonoBehaviour
             indiceOndaAtual++;
         }
 
+        quantidadeWaves.text = "Vitória! insetos foram detidos por agora";
         Debug.Log("Todas as ondas foram finalizadas!");
     }
 
@@ -101,6 +100,10 @@ public class WaveSpawner : MonoBehaviour
     {
         // Exibe o cronômetro sem casas decimais (números inteiros) para melhor leitura na UI
         WaveTimeText.text = $"Tempo entre Ondas: {Mathf.CeilToInt(cronometroRegressa)} segundos";
+        if (quantidadeWaves != null) 
+        {
+            quantidadeWaves.text = "Round" + (indiceOndaAtual + 1) + "/" + ondas.Length;
+        }
     }
 
 }
