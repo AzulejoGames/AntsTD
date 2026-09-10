@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueTower
   moveSpeed: 8
-  damage: 2
+  damage: 3
 --- !u!50 &2586062173424348256
 Rigidbody2D:
   serializedVersion: 5

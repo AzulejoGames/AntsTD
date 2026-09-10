@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7903751861027435068}
   - component: {fileID: 3519070556490602}
   - component: {fileID: 722789306363155462}
+  - component: {fileID: 1212123404656787812}
   m_Layer: 0
   m_Name: Base
   m_TagString: Torre
@@ -134,11 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18025b99e1620f4359335458ddf0d42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueBase
-  custo: 1
   tempoDeVida: 15
   tempoAcabou: 0
   moveSpeed: 2
-  damage: 1
+  damage: 2
 --- !u!61 &3519070556490602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207,3 +207,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1212123404656787812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317142760951300056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde26dd26ccd032db859bc78ef2a50e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DadosFormigas
+  custo: 1

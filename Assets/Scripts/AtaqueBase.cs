@@ -4,9 +4,7 @@
 public class AtaqueBase : MonoBehaviour
 {
     
-    [Tooltip("custo necessário para colocar torre")]
-    [SerializeField] private int custo = 50;
-    public int Custo => custo;
+    
   
   [Tooltip("configuraçoes de formiga")]
 [SerializeField] private float tempoDeVida = 10f;

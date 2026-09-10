@@ -39,16 +39,14 @@ public class SistemaDeConstrucao : MonoBehaviour
     {
         if (torreSelecionada == null)
         return;
-
-    AtaqueBase ataqueBase = torreSelecionada.GetComponent<AtaqueBase>();
-
-    if (ataqueBase == null)
+ 
+    DadosFormigas dadosFormigas = torreSelecionada.GetComponent<DadosFormigas>();
+    if( dadosFormigas == null)
     {
-        Debug.LogError("A torre não possui AtaqueBase.");
+        Debug.LogError("O prefab da torre não possui o componente DadosFormigas.");
         return;
     }
-
-    int custo = ataqueBase.Custo;
+    int custo = dadosFormigas.Custo;
 
     if (baseHealth.pontos < custo)
     {

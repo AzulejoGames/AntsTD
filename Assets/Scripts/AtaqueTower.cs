@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AtaqueTower : MonoBehaviour
 {
+  
     [SerializeField] private float moveSpeed = 8f;
     [SerializeField] private int damage = 1;
 

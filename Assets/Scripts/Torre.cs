@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Torre : MonoBehaviour
 {
+      
+
     [Header("Configurações da Torre")]
     [SerializeField] private float alcance = 4f;
     [SerializeField] private float tempoEntreTiros = 1f;
