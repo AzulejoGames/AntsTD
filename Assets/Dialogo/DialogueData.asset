@@ -16,7 +16,7 @@ MonoBehaviour:
   - name: Tutor
     dialogueText: "Ol\xE1 novato ! estou aqui para ser seu tutor, voc\xEA foi escalado
       para orientar nossas tropas."
-  - name: Tutor
+  - name: Tuto
     dialogueText: "Sua tarefa consiste em usar nosso N\xE9ctar para mobilizar nossas
       tropas para impedir o avan\xE7o dos invasores."
   - name: Tutor
@@ -26,11 +26,19 @@ MonoBehaviour:
   - name: Tutor
     dialogueText: "Nosso precioso n\xE9ctar, use ele para preparar nossos tropas
       para combate. No momento temos disponiveis dois tipos de combatentes, elas
-      podem ser vista logo abiaxo. "
+      podem ser vista logo abaixo. "
   - name: Tutor
-    dialogueText: "Clique e a posicione no local desejado, cada formiga tem um custo
-      pr\xF3prio, essas n\xE3o s\xE3o muito caras. Derrote inimigos e consiga mais
-      n\xE9ctar para colocar mais formigas!"
+    dialogueText: "Clique e a posicione no local pr\xF3ximo aos inimigos, cada formiga
+      tem um custo pr\xF3prio, essas n\xE3o s\xE3o muito caras. Derrote inimigos
+      e consiga mais n\xE9ctar para colocar mais formigas!"
+  - name: Tutor
+    dialogueText: "A primeira formiga que temos \xE9 a guerreira, ela \xE9 muito
+      boa no que faz, mas infelizmente \xE9 muito fr\xE1gil. Posicione ela no campo
+      de batlha com custo de 1 n\xE9ctar."
+  - name: Tutor
+    dialogueText: "A segunda \xE9 a Atiradora, tem uma precis\xE3o incr\xEDvel, mas
+      seus disparos s\xE3o lentas, ela funciona melhor em equipe. Posicione ao custo
+      de 5 n\xE9ctar."
   - name: Tutor
     dialogueText: "Nossas melhores Formigas de campo j\xE1 sabem que o inimigo viram
       das moitas. Gra\xE7as as suas Habilidades podemos tamb\xE9m qunatos grupos

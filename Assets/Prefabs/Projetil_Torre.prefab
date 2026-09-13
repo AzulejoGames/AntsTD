@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca418576d8ad66429ae6ffa45ccc066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueTower
-  moveSpeed: 8
-  damage: 3
+  moveSpeed: 6
+  damage: 2
 --- !u!50 &2586062173424348256
 Rigidbody2D:
   serializedVersion: 5

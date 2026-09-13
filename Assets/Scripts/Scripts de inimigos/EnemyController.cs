@@ -35,7 +35,7 @@ public class EnemyController : MonoBehaviour
     vidas -= damage;
 
     Debug.Log("VIDAS AGORA: " + vidas);
-        vidas -= damage;
+        
         if (vidas <= 0)
         {
             Die();

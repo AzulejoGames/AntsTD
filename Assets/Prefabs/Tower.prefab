@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Torre
   alcance: 3
-  tempoEntreTiros: 2
+  tempoEntreTiros: 1.5
   camadaInimigo:
     serializedVersion: 2
     m_Bits: 64

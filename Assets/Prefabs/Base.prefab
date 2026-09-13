@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueBase
   moveSpeed: 2
   distanciaDoAtaque: 0.3
-  damage: 1
+  damage: 3
 --- !u!95 &722789306363155462
 Animator:
   serializedVersion: 7
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde26dd26ccd032db859bc78ef2a50e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DadosFormigas
-  custo: 2
+  custo: 1
 --- !u!58 &3998284651532091485
 CircleCollider2D:
   m_ObjectHideFlags: 0
