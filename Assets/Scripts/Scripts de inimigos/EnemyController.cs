@@ -3,10 +3,13 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     private GameManager gameManager;
+    [SerializeField] private Animator animator;
 
     [Tooltip("vidas do inimigo")]
     [SerializeField] private int vidas = 3;
     public int pontosGanhos = 10;
+    [Tooltip("tempo de morte do inimigo")]
+    [SerializeField] private float tempoMorte = 1f;
 
     [Tooltip("Arraste o objeto com o BaseHealth para cá ou deixe o script encontrar na cena")]
     public BaseHealth baseAlvo;
@@ -15,7 +18,7 @@ public class EnemyController : MonoBehaviour
     {
        
         gameManager = FindFirstObjectByType<GameManager>();
-
+        animator = GetComponent<Animator>();
   
         if (baseAlvo == null)
         {
@@ -58,8 +61,15 @@ public class EnemyController : MonoBehaviour
         {
             gameManager.InimigosCaiu();
         }
+       
 
+        GetComponent<Collider2D>().enabled = false;
+
+        this.enabled = false;
+
+        animator.SetTrigger("Morreu");
         Debug.Log("Inimigo morreu");
-        Destroy(gameObject);
+
+        Destroy(gameObject, tempoMorte);
     }
 }
