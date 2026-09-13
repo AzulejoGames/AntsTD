@@ -5,10 +5,9 @@ public class DialogueController : MonoBehaviour
 {
 
     [Header("Animação de Texto")]
-    public float typeDelay = 0.05f;
-
-   
+    public float typeDelay = 0.02f;
     private Coroutine typingCoroutine;
+
       [Header("Dados")]
     [SerializeField] private DialogueData dialogueData;
 
@@ -19,7 +18,7 @@ public class DialogueController : MonoBehaviour
 
     private int indiceAtual = 0;
 
-       public void TypeText(string text)
+    public void TypeText(string text)
     {
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
