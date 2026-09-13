@@ -6443,7 +6443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee71b2c52ddc74bef8b96c11d303974e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
-  typeDelay: 0.05
+  typeDelay: 0.01
   dialogueData: {fileID: 11400000, guid: 7f71c80eafff9f560906d03ee9d0f9a1, type: 2}
   dialoguePanel: {fileID: 3338799835299231095}
   nameText: {fileID: 1995213573547872210}

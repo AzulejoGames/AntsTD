@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9730ccf388272f926831544dfe7a9cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDirection
-  moveSpeed: 3
+  moveSpeed: 2
   pontosCaminho: []
 --- !u!50 &2138139774320540006
 Rigidbody2D:

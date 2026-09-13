@@ -5,7 +5,7 @@ public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private TMP_Text WaveTimeText;
     [SerializeField] private TMP_Text quantidadeWaves;
-    private bool CronometroATivo = true;
+    //private bool CronometroATivo = true;
     // Estrutura para configurar cada onda individualmente no Inspector
     [System.Serializable]
     public class Wave

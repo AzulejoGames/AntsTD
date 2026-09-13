@@ -4,7 +4,7 @@ public class EnemyController : MonoBehaviour
 {
     EnemyDirection enemyDirection;
     private GameManager gameManager;
-    [SerializeField] private Animator animator;
+    private Animator animator;
 
     [Tooltip("vidas do inimigo")]
     [SerializeField] private int vidas = 3;
