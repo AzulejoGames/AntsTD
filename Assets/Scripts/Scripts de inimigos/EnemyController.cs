@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    EnemyDirection enemyDirection;
     private GameManager gameManager;
     [SerializeField] private Animator animator;
 
@@ -19,6 +20,7 @@ public class EnemyController : MonoBehaviour
        
         gameManager = FindFirstObjectByType<GameManager>();
         animator = GetComponent<Animator>();
+        enemyDirection = GetComponent<EnemyDirection>();
   
         if (baseAlvo == null)
         {
@@ -28,6 +30,11 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+         Debug.Log("INIMIGO RECEBEU DANO: " + damage + " | VIDAS ANTES: " + vidas);
+
+    vidas -= damage;
+
+    Debug.Log("VIDAS AGORA: " + vidas);
         vidas -= damage;
         if (vidas <= 0)
         {
@@ -61,15 +68,18 @@ public class EnemyController : MonoBehaviour
         {
             gameManager.InimigosCaiu();
         }
-       
 
         GetComponent<Collider2D>().enabled = false;
+       if(enemyDirection != null)
+        {
+            enemyDirection.enabled = false; // Desativa o script EnemyDirection
+        }
+
+        
 
         this.enabled = false;
 
-        animator.SetTrigger("Morreu");
-        Debug.Log("Inimigo morreu");
-
+        animator.SetBool("Morreu", true);
         Destroy(gameObject, tempoMorte);
     }
 }
