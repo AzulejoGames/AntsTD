@@ -15,7 +15,7 @@ public class BaseHealth : MonoBehaviour
     public int pontos = 0;
     public void  LateUpdate()
     {
-        healthText.text = " vidas: " + health.ToString();
+        healthText.text = " : " + health.ToString();
         pontosText.text = " Néctar: " + pontos.ToString();
 
     }

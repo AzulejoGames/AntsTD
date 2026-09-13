@@ -15,18 +15,22 @@ MonoBehaviour:
   talkscrip:
   - name: Tutor
     dialogueText: "Ol\xE1 novato ! estou aqui para ser seu tutor, voc\xEA foi escalado
-      para orientar nossas tropas"
+      para orientar nossas tropas."
   - name: Tutor
     dialogueText: "Sua tarefa consiste em usar nosso N\xE9ctar para mobilizar nossas
-      tropas para impedir o avan\xE7o dos invasores"
+      tropas para impedir o avan\xE7o dos invasores."
   - name: Tutor
-    dialogueText: "Vamos l\u015B, no canto superior direito podemos ver quanto nosso
+    dialogueText: "Vamos l\xE1, no canto superior direito podemos ver quanto nosso
       magestoso formigueiro aguenta, junto dele podemos ver quanto do nosso precioso
       n\xE9ctar temos."
   - name: Tutor
     dialogueText: "Nosso precioso n\xE9ctar, use ele para preparar nossos tropas
       para combate. No momento temos disponiveis dois tipos de combatentes, elas
-      podem ser vista logo abiaxo. Clique e a posicione no local desejado."
+      podem ser vista logo abiaxo. "
+  - name: Tutor
+    dialogueText: "Clique e a posicione no local desejado, cada formiga tem um custo
+      pr\xF3prio, essas n\xE3o s\xE3o muito caras. Derrote inimigos e consiga mais
+      n\xE9ctar para colocar mais formigas!"
   - name: Tutor
     dialogueText: "Nossas melhores Formigas de campo j\xE1 sabem que o inimigo viram
       das moitas. Gra\xE7as as suas Habilidades podemos tamb\xE9m qunatos grupos
