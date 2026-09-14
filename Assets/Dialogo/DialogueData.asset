@@ -34,7 +34,7 @@ MonoBehaviour:
   - name: Tutor
     dialogueText: "A primeira formiga que temos \xE9 a guerreira, ela \xE9 muito
       boa no que faz, mas infelizmente \xE9 muito fr\xE1gil. Posicione ela no campo
-      de batlha com custo de 1 n\xE9ctar."
+      de batlha perto dos inimigos com custo de 1 n\xE9ctar."
   - name: Tutor
     dialogueText: "A segunda \xE9 a Atiradora, tem uma precis\xE3o incr\xEDvel, mas
       seus disparos s\xE3o lentas, ela funciona melhor em equipe. Posicione ao custo
