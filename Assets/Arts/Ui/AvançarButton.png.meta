@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d13285246f85d18bc950d348cd3c08e2
+guid: 89c54c678d7c4104a979b493f7682d1d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6211985666924808985
-    second: Foto_0
+      213: -7768357670936009816
+    second: "Avan\xE7arButton_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Foto_0
+      name: "Avan\xE7arButton_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91b0fd23d08653650800000000000000
-      internalID: 6211985666924808985
+      spriteID: 8a3ada75bdf313490800000000000000
+      internalID: -7768357670936009816
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Foto_0: 6211985666924808985
+      "Avan\xE7arButton_0": -7768357670936009816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
