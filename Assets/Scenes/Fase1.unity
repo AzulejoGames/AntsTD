@@ -6593,19 +6593,19 @@ MonoBehaviour:
     taxaDeSpawn: 1
   - nomeDaOnda: 2
     prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
-    quantidade: 4
-    taxaDeSpawn: 1
+    quantidade: 5
+    taxaDeSpawn: 0.5
   - nomeDaOnda: 3
     prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
     quantidade: 5
-    taxaDeSpawn: 1
-  - nomeDaOnda: 3
+    taxaDeSpawn: 0.7
+  - nomeDaOnda: 4
     prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
     quantidade: 5
-    taxaDeSpawn: 1
-  - nomeDaOnda: 3
+    taxaDeSpawn: 0.7
+  - nomeDaOnda: 5
     prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
-    quantidade: 5
+    quantidade: 6
     taxaDeSpawn: 1
   tempoEntreOndas: 5
   spawnPoint: {fileID: 7715259907762800974}

@@ -6960,7 +6960,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5590985503576288341}
         m_TargetAssemblyTypeName: SistemaDeConstrucao, Assembly-CSharp
         m_MethodName: SelecionarTorre
         m_Mode: 2
@@ -7628,7 +7628,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5590985503576288341}
         m_TargetAssemblyTypeName: SistemaDeConstrucao, Assembly-CSharp
         m_MethodName: SelecionarTorre
         m_Mode: 2
@@ -8438,7 +8438,7 @@ MonoBehaviour:
   ondas:
   - nomeDaOnda: 1
     prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
-    quantidade: 1
+    quantidade: 4
     taxaDeSpawn: 1
   - nomeDaOnda: 2
     prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
@@ -8446,25 +8446,21 @@ MonoBehaviour:
     taxaDeSpawn: 1
   - nomeDaOnda: 3
     prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
-    quantidade: 5
+    quantidade: 6
+    taxaDeSpawn: 1
+  - nomeDaOnda: 3
+    prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
+    quantidade: 6
     taxaDeSpawn: 1
   - nomeDaOnda: 3
     prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
     quantidade: 5
     taxaDeSpawn: 1
-  - nomeDaOnda: 3
+  - nomeDaOnda: 6
     prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
     quantidade: 5
     taxaDeSpawn: 1
-  - nomeDaOnda: 3
-    prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
-    quantidade: 5
-    taxaDeSpawn: 1
-  - nomeDaOnda: 3
-    prefabInimigo: {fileID: 6353693256137524337, guid: ca0af8c7447468a46ab63c2acc510639, type: 3}
-    quantidade: 5
-    taxaDeSpawn: 1
-  tempoEntreOndas: 3
+  tempoEntreOndas: 2.5
   spawnPoint: {fileID: 731184460568799915}
   pontosCaminho:
   - {fileID: 572861608}
