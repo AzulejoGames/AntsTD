@@ -64,6 +64,10 @@ public class DialogueController : MonoBehaviour
         MostrarFala();
     }
 
+    public void PularDialogo()
+    {
+        EncerrarDialogo();
+    }
     private void MostrarFala()
     {
         Dialogue fala = dialogueData.talkscrip[indiceAtual];
