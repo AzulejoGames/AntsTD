@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 722789306363155462}
   - component: {fileID: 1212123404656787812}
   - component: {fileID: 3998284651532091485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Base
   m_TagString: Torre
   m_Icon: {fileID: 0}

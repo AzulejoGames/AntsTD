@@ -7,7 +7,7 @@ public class SistemaDeConstrucao : MonoBehaviour
     private GameObject torreSelecionada;
     private InputCabeca inputCabeca;
     private BaseHealth baseHealth;
-
+    
     private void Awake()
     {
         inputCabeca = FindFirstObjectByType<InputCabeca>();
@@ -60,11 +60,17 @@ public class SistemaDeConstrucao : MonoBehaviour
 
     posicao.z = 0f;
 
-    Instantiate(
-        torreSelecionada,
-        posicao,
-        Quaternion.identity
-    );
+ // Verifica se há colisão com outra torre na posição desejada
+
+    Collider2D[] colisores = Physics2D.OverlapCircleAll(posicao,1f);
+
+    foreach (Collider2D colisao in colisores)
+    {    
+     Debug.Log("Já existe uma torre aqui!");
+     return;
+    }
+
+    Instantiate(  torreSelecionada, posicao,Quaternion.identity);
 
     baseHealth.pontos -= custo;
 
