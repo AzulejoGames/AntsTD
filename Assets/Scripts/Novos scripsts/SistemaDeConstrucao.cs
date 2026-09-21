@@ -70,7 +70,7 @@ public class SistemaDeConstrucao : MonoBehaviour
      return;
     }
 
-    Instantiate(  torreSelecionada, posicao,Quaternion.identity);
+  GameObject novaTorre = Instantiate( torreSelecionada,posicao,Quaternion.identity);
 
     baseHealth.pontos -= custo;
 

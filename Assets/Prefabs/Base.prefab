@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 722789306363155462}
   - component: {fileID: 1212123404656787812}
   - component: {fileID: 3998284651532091485}
+  - component: {fileID: 6813716314398848343}
   m_Layer: 7
   m_Name: Base
   m_TagString: Torre
@@ -209,3 +210,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &6813716314398848343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317142760951300056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57774413f881a7b1ab40340e53da6f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrastarComEventos
