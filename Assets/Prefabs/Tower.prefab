@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8027010763587840158}
   - component: {fileID: 6201948505230575300}
   - component: {fileID: 4150688569214382846}
+  - component: {fileID: 4928625775565503033}
   m_Layer: 7
   m_Name: Tower
   m_TagString: Untagged
@@ -186,6 +187,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.8
+--- !u!114 &4928625775565503033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2484705652973382258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57774413f881a7b1ab40340e53da6f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrastarComEventos
 --- !u!1 &8946072308670086556
 GameObject:
   m_ObjectHideFlags: 0

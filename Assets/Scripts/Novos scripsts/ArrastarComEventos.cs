@@ -4,13 +4,27 @@ public class ArrastarComEventos : MonoBehaviour
 {
     private Camera cam;
     private InputCabeca inputCabeca;
-
+    private AtaqueBase ataqueBase;
+    private Torre torre;
     private bool estaArrastando = true;
 
     private void Awake()
     {
         cam = Camera.main;
         inputCabeca = FindFirstObjectByType<InputCabeca>();
+
+        ataqueBase = FindFirstObjectByType<AtaqueBase>();
+        torre = FindFirstObjectByType<Torre>();
+    
+        if (ataqueBase != null)
+        {
+           ataqueBase.enabled = false;
+        }
+        if (torre != null)
+        {
+            torre.enabled = false;
+        }
+       
     }
 
     private void OnEnable()
@@ -46,6 +60,16 @@ public class ArrastarComEventos : MonoBehaviour
     private void PararArrasto()
     {
         estaArrastando = false;
+
+        if (ataqueBase != null)
+        {
+            ataqueBase.enabled = true;
+        }
+        if (torre != null)
+        {
+            torre.enabled = true;
+        }
+       
 
         Debug.Log("Torre posicionada!");
     }
