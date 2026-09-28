@@ -6566,7 +6566,7 @@ Transform:
   m_GameObject: {fileID: 1654924112}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.77, y: 0, z: 0}
+  m_LocalPosition: {x: -12, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8180,7 +8180,7 @@ Transform:
   m_GameObject: {fileID: 354641390804754175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.98, y: 0, z: 0}
+  m_LocalPosition: {x: 12, y: 0, z: 0}
   m_LocalScale: {x: 1.9532, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8214,6 +8214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c80165053225e42850578e5cded591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseHealth
+  coracao: {fileID: 7979308199034657203}
+  corDano: {r: 0.6320754, g: 0.22957455, b: 0.22957455, a: 1}
+  duracaoEfeito: 0.2
+  intensidadeDano: 0.608
   health: 3
   healthText: {fileID: 1638022213791441511}
   cenaGameOver: GameOver
@@ -8437,6 +8441,7 @@ GameObject:
   - component: {fileID: 7979308199034657202}
   - component: {fileID: 6729365461409875252}
   - component: {fileID: 5614335557735021294}
+  - component: {fileID: 7979308199034657203}
   m_Layer: 5
   m_Name: Vidas
   m_TagString: Untagged
@@ -9176,8 +9181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5fbf39482d095212bd7a4d5f58e1864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotaoComprarT
-  torre: {fileID: 0}
-  sistema: {fileID: 0}
 --- !u!1 &7672525773703139006
 GameObject:
   m_ObjectHideFlags: 0
@@ -9276,6 +9279,18 @@ RectTransform:
   m_AnchoredPosition: {x: 480, y: -40}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7979308199034657203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102528600967147859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197b6346722d69b4ab1fb36ffceef195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeartHealth
 --- !u!1 &8151846119763927191
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     private Color corOriginal;
     [SerializeField] private Color corDano = Color.red;
     [SerializeField] private float duracaoEfeito = 0.2f;
-
+    [SerializeField, Range(0f, 1f)] private float intensidadeDano = 0.5f;
 
     [Tooltip("vidas do inimigo")]
     [SerializeField] private int vidas = 3;
@@ -54,8 +54,7 @@ public class EnemyController : MonoBehaviour
     }
     IEnumerator EfeitoDanoCouroutine()
     {
-        spriteRenderer.color = corDano;
-
+        spriteRenderer.color = Color.Lerp(corOriginal, corDano, intensidadeDano);
         yield return new WaitForSeconds(duracaoEfeito);
 
       
