@@ -1,10 +1,18 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
+
     EnemyDirection enemyDirection;
     private GameManager gameManager;
     private Animator animator;
+
+    private Color corOriginal;
+    [SerializeField] private Color corDano = Color.red;
+    [SerializeField] private float duracaoEfeito = 0.2f;
+
 
     [Tooltip("vidas do inimigo")]
     [SerializeField] private int vidas = 3;
@@ -17,7 +25,9 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
-       
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        corOriginal = spriteRenderer.color;
         gameManager = FindFirstObjectByType<GameManager>();
         animator = GetComponent<Animator>();
         enemyDirection = GetComponent<EnemyDirection>();
@@ -33,6 +43,7 @@ public class EnemyController : MonoBehaviour
          Debug.Log("INIMIGO RECEBEU DANO: " + damage + " | VIDAS ANTES: " + vidas);
 
     vidas -= damage;
+    StartCoroutine(EfeitoDanoCouroutine());
 
     Debug.Log("VIDAS AGORA: " + vidas);
         
@@ -40,6 +51,17 @@ public class EnemyController : MonoBehaviour
         {
             Die();
         }
+    }
+    IEnumerator EfeitoDanoCouroutine()
+    {
+        spriteRenderer.color = corDano;
+
+        yield return new WaitForSeconds(duracaoEfeito);
+
+      
+        spriteRenderer.color = corOriginal;
+
+
     }
 
     void OnTriggerEnter2D(Collider2D colidiu)
