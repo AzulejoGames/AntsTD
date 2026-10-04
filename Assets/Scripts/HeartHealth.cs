@@ -12,6 +12,7 @@ public class HeartHealth : MonoBehaviour
 
         if (animator != null)
         {
+            Debug.Log("TakeDamage called");
             animator.SetTrigger("Hurt");
         }
 
