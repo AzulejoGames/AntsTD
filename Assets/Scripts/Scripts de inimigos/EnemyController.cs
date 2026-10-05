@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    [SerializeField] private NectarRecebe nectar;
     private SpriteRenderer spriteRenderer;
 
     EnemyDirection enemyDirection;
@@ -31,7 +32,12 @@ public class EnemyController : MonoBehaviour
         gameManager = FindFirstObjectByType<GameManager>();
         animator = GetComponent<Animator>();
         enemyDirection = GetComponent<EnemyDirection>();
-  
+
+        if (nectar == null)
+        {
+            nectar = FindFirstObjectByType<NectarRecebe>();
+        }
+
         if (baseAlvo == null)
         {
             baseAlvo = FindFirstObjectByType<BaseHealth>();
@@ -78,7 +84,12 @@ public class EnemyController : MonoBehaviour
         if (baseAlvo != null)
         {
             baseAlvo.pontos += pontosGanhos;
+            if (nectar) 
+            {
+                nectar.Recebeu();
+            }
             Debug.Log("Pontos adicionados à base. Pontos atuais: " + baseAlvo.pontos);
+
         }
         else
         {
