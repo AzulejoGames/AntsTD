@@ -102,7 +102,7 @@ public class WaveSpawner : MonoBehaviour
         WaveTimeText.text = $"Tempo entre Ondas: {Mathf.CeilToInt(cronometroRegressa)} segundos";
         if (quantidadeWaves != null) 
         {
-            quantidadeWaves.text = "Round" + (indiceOndaAtual + 1) + "/" + ondas.Length;
+            quantidadeWaves.text = "Wave" + (indiceOndaAtual + 1);
         }
     }
 

@@ -12,11 +12,13 @@ public class AtaqueBase : MonoBehaviour
  private Transform alvo;
  private Rigidbody2D rb;
  public int damage = 1;
+ private Animator animator;
  
 
  void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 private void FixedUpdate()
     {
@@ -85,7 +87,10 @@ private void FixedUpdate()
      }
     void BaseDie()
     {
-        Destroy(gameObject);
+        this.enabled = false;
+        animator.SetBool("Morte", true);
+
+        Destroy(gameObject, 0.5f);
         
     }
 
