@@ -4,7 +4,7 @@ public class EnemyDirection : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private Transform[] pontosCaminho; // Suporta 2 ou mais pontos!
-
+    [SerializeField] private AudioSource somPassoI;
     private int indicePontoAtual = 0;
 
     // Método para receber o array de pontos do Spawner
@@ -50,6 +50,10 @@ public class EnemyDirection : MonoBehaviour
     // --------------------
         // Move o inimigo em direção ao ponto alvo atual
         transform.position = Vector2.MoveTowards(transform.position, pontoAlvo.position, moveSpeed * Time.deltaTime);
+        if (somPassoI != null && !somPassoI.isPlaying)
+        {
+            somPassoI.Play();
+        }
 
         // Verifica se chegou próximo do ponto alvo atual
         if (Vector2.Distance(transform.position, pontoAlvo.position) < 0.1f)
@@ -60,6 +64,10 @@ public class EnemyDirection : MonoBehaviour
             if (indicePontoAtual >= pontosCaminho.Length)
             {
                 ChegouAoFinal();
+                if (somPassoI != null)
+                {
+                    somPassoI.Stop();
+                }
             }
         }
     }

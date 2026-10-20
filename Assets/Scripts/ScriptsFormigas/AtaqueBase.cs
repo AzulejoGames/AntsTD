@@ -3,7 +3,7 @@
 
 public class AtaqueBase : MonoBehaviour
 {
-    
+  [SerializeField] private AudioSource somPassos;
   [Tooltip("configuraçoes de formiga")]
 //[SerializeField] private float tempoDeVida = 5f;
 //public bool tempoAcabou = false;
@@ -72,6 +72,10 @@ private void FixedUpdate()
       if (collision.CompareTag("inimigo"))
         {
             alvo = collision.transform;
+            if (somPassos != null && !somPassos.isPlaying)
+            {
+                somPassos.Play();
+            }
             Debug.Log("Alvo encontrado: ");
         }
         
@@ -82,6 +86,10 @@ private void FixedUpdate()
          if (collision.CompareTag("inimigo"))
          {
                 alvo = null;
+            if(somPassos != null)
+            {
+                somPassos.Stop();
+            }
                 Debug.Log("Alvo perdido");
          }
      }

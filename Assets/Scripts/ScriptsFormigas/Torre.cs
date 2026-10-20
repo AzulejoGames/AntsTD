@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Torre : MonoBehaviour
 {
-      
+    [SerializeField] private AudioSource audioTorre;
+    
 
     [Header("Configurações da Torre")]
     [SerializeField] private float alcance = 4f;
@@ -60,6 +61,11 @@ Vector2 direcao = (alvoAtual.position - transform.position).normalized;
 
     void Atirar()
     {
+        if (audioTorre != null)
+        {
+            audioTorre.PlayOneShot(audioTorre.clip);
+        }
+
         Vector3 posicaoSaida = pontoDeDisparo != null ? pontoDeDisparo.position : transform.position;
 
         GameObject novaBala = Instantiate(prefabProjetil, posicaoSaida, Quaternion.identity);

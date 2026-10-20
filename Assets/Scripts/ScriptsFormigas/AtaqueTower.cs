@@ -5,13 +5,14 @@ public class AtaqueTower : MonoBehaviour
   
     [SerializeField] private float moveSpeed = 8f;
     [SerializeField] private int damage = 1;
-
+    
     private Transform alvo;
     private Rigidbody2D rb;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+       
     }
 
 
@@ -19,6 +20,7 @@ public class AtaqueTower : MonoBehaviour
     {
         alvo = novoAlvo;
     }
+   
 
     private void FixedUpdate()
     {
@@ -32,6 +34,7 @@ public class AtaqueTower : MonoBehaviour
       
         Vector2 direcao = (alvo.position - transform.position).normalized;
         rb.MovePosition(rb.position + direcao * moveSpeed * Time.fixedDeltaTime);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
