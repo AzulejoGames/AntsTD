@@ -5,7 +5,8 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private NectarRecebe nectar;
     private SpriteRenderer spriteRenderer;
-
+    [SerializeField]
+    private AudioSource audioDanoI;
     EnemyDirection enemyDirection;
     private GameManager gameManager;
     private Animator animator;
@@ -49,7 +50,11 @@ public class EnemyController : MonoBehaviour
          Debug.Log("INIMIGO RECEBEU DANO: " + damage + " | VIDAS ANTES: " + vidas);
 
     vidas -= damage;
-    StartCoroutine(EfeitoDanoCouroutine());
+        if (audioDanoI != null)
+        {
+            audioDanoI.PlayOneShot(audioDanoI.clip);
+        }
+        StartCoroutine(EfeitoDanoCouroutine());
 
     Debug.Log("VIDAS AGORA: " + vidas);
         
@@ -80,7 +85,10 @@ public class EnemyController : MonoBehaviour
 
     void Die()
     {
-        
+        if (audioDanoI != null)
+        {
+            audioDanoI.PlayOneShot(audioDanoI.clip);
+        }
         if (baseAlvo != null)
         {
             baseAlvo.pontos += pontosGanhos;

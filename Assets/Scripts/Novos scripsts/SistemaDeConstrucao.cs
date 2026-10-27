@@ -7,7 +7,7 @@ public class SistemaDeConstrucao : MonoBehaviour
     private GameObject torreSelecionada;
     private InputCabeca inputCabeca;
     private BaseHealth baseHealth;
-    
+    [SerializeField] private LayerMask camadaTorres;
     private void Awake()
     {
         inputCabeca = FindFirstObjectByType<InputCabeca>();
@@ -60,17 +60,20 @@ public class SistemaDeConstrucao : MonoBehaviour
 
     posicao.z = 0f;
 
- // Verifica se há colisão com outra torre na posição desejada
+        // Verifica se há colisão com outra torre na posição desejada
 
-    Collider2D[] colisores = Physics2D.OverlapCircleAll(posicao,1f);
+        Collider2D[] colisores = Physics2D.OverlapCircleAll(
+        posicao,
+        1f,
+        camadaTorres
+    );
 
-    foreach (Collider2D colisao in colisores)
-    {    
-     Debug.Log("Já existe uma torre aqui!");
-     return;
-    }
-
-  GameObject novaTorre = Instantiate( torreSelecionada,posicao,Quaternion.identity);
+        if (colisores.Length > 0)
+        {
+            Debug.Log("Muito perto de outra torre!");
+            return;
+        }
+        GameObject novaTorre = Instantiate( torreSelecionada,posicao,Quaternion.identity);
 
     baseHealth.pontos -= custo;
 

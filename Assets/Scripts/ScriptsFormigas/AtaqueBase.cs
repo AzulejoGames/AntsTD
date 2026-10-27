@@ -3,10 +3,9 @@
 
 public class AtaqueBase : MonoBehaviour
 {
+ 
   [SerializeField] private AudioSource somPassos;
   [Tooltip("configuraçoes de formiga")]
-//[SerializeField] private float tempoDeVida = 5f;
-//public bool tempoAcabou = false;
  [SerializeField] private float moveSpeed = 3f;
  [SerializeField] private float distanciaDoAtaque = 0.3f;
  private Transform alvo;
@@ -54,16 +53,7 @@ private void FixedUpdate()
     }
     private void Update()
     {
-        //if(!tempoAcabou)
-       // {
-            
-          //  tempoDeVida -= Time.deltaTime;
-        //if (tempoDeVida <= 0f)
-       // {
-          //  tempoAcabou = true;
-            
-       // }
-       // }
+        
         
     }
 
@@ -95,6 +85,7 @@ private void FixedUpdate()
      }
     void BaseDie()
     {
+      
         this.enabled = false;
         animator.SetBool("Morte", true);
 
