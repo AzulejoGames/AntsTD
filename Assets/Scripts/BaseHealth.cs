@@ -27,8 +27,8 @@ public class BaseHealth : MonoBehaviour
     }
     public void  LateUpdate()
     {
-        healthText.text = " : " + health.ToString();
-        pontosText.text = " Néctar: " + pontos.ToString();
+        healthText.text = "  " + health.ToString();
+        pontosText.text = " Néctar" + pontos.ToString();
 
     }
  public void OnTriggerEnter2D(Collider2D collision)

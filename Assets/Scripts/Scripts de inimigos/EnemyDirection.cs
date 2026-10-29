@@ -7,6 +7,12 @@ public class EnemyDirection : MonoBehaviour
     [SerializeField] private AudioSource somPassoI;
     private int indicePontoAtual = 0;
 
+    private Rigidbody2D rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     // Método para receber o array de pontos do Spawner
     public void ConfigurarPontos(Transform[] novosPontos)
     {
@@ -31,43 +37,48 @@ public class EnemyDirection : MonoBehaviour
         }
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        // Se não tiver pontos ou se já percorreu todos os pontos, interrompe o movimento
-        if (pontosCaminho == null || indicePontoAtual >= pontosCaminho.Length) return;
+        if (rb == null ||
+            pontosCaminho == null ||
+            indicePontoAtual >= pontosCaminho.Length)
+        {
+            return;
+        }
 
         Transform pontoAlvo = pontosCaminho[indicePontoAtual];
 
-        if (pontoAlvo == null) return;
-        
-// --- ROTAÇÃO AQUI ---
-    // 1. Calcula a direção em relação ao ponto atual do caminho
-    Vector2 direcao = (pontoAlvo.position - transform.position).normalized;
+        if (pontoAlvo == null)
+            return;
 
-    // 2. Calcula o ângulo e aplica a rotação (ajuste com -90f ou +90f dependendo do sprite)
-    float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
-    transform.rotation = Quaternion.Euler(0, 0, angulo -90f);
-    // --------------------
-        // Move o inimigo em direção ao ponto alvo atual
-        transform.position = Vector2.MoveTowards(transform.position, pontoAlvo.position, moveSpeed * Time.deltaTime);
+        Vector2 direcao =
+            ((Vector2)pontoAlvo.position - rb.position).normalized;
+
+        float angulo =
+            Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+
+        rb.MoveRotation(angulo - 90f);
+
+        rb.MovePosition(
+            rb.position +
+            direcao * moveSpeed * Time.fixedDeltaTime
+        );
+
         if (somPassoI != null && !somPassoI.isPlaying)
         {
             somPassoI.Play();
         }
 
-        // Verifica se chegou próximo do ponto alvo atual
-        if (Vector2.Distance(transform.position, pontoAlvo.position) < 0.1f)
+        if (Vector2.Distance(rb.position, pontoAlvo.position) < 0.1f)
         {
-            indicePontoAtual++; // Avança para o próximo ponto da lista
+            indicePontoAtual++;
 
-            // Se o novo índice for igual ou maior que a quantidade de pontos, chegou ao final da rota
             if (indicePontoAtual >= pontosCaminho.Length)
             {
                 ChegouAoFinal();
+
                 if (somPassoI != null)
-                {
                     somPassoI.Stop();
-                }
             }
         }
     }

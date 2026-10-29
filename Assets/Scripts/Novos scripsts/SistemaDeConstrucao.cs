@@ -62,17 +62,14 @@ public class SistemaDeConstrucao : MonoBehaviour
 
         // Verifica se há colisão com outra torre na posição desejada
 
-        Collider2D[] colisores = Physics2D.OverlapCircleAll(
-        posicao,
-        1f,
-        camadaTorres
-    );
+        Collider2D[] colisores = Physics2D.OverlapCircleAll(posicao,1f,camadaTorres);
 
         if (colisores.Length > 0)
         {
             Debug.Log("Muito perto de outra torre!");
             return;
         }
+
         GameObject novaTorre = Instantiate( torreSelecionada,posicao,Quaternion.identity);
 
     baseHealth.pontos -= custo;
