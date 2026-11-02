@@ -8,6 +8,9 @@ public class SistemaDeConstrucao : MonoBehaviour
     private InputCabeca inputCabeca;
     private BaseHealth baseHealth;
     [SerializeField] private LayerMask camadaTorres;
+    [SerializeField] private LayerMask camadaparede;
+    [SerializeField] private float raioColisao = 0.4f;
+    private Vector3 ultimaPosicao;
     private void Awake()
     {
         inputCabeca = FindFirstObjectByType<InputCabeca>();
@@ -56,20 +59,38 @@ public class SistemaDeConstrucao : MonoBehaviour
         return;
     }
 
-    Vector3 posicao = cam.ScreenToWorldPoint(inputCabeca.PosicaoInput);
+   Ray raio = cam.ScreenPointToRay(inputCabeca.PosicaoInput);
 
-    posicao.z = 0f;
+Plane plano = new Plane(Vector3.forward, Vector3.zero);
+
+if (!plano.Raycast(raio, out float distancia))
+    return;
+
+Vector3 posicao = raio.GetPoint(distancia);
+posicao.z = 0f;
+
+    ultimaPosicao = posicao;
 
         // Verifica se há colisão com outra torre na posição desejada
 
-        Collider2D[] colisores = Physics2D.OverlapCircleAll(posicao,1f,camadaTorres);
+        Collider2D[] colisores = Physics2D.OverlapCircleAll(posicao,raioColisao,camadaTorres);
 
         if (colisores.Length > 0)
         {
             Debug.Log("Muito perto de outra torre!");
             return;
         }
+  Collider2D[] bloqueios = Physics2D.OverlapCircleAll(
+    posicao,
+    raioColisao,
+    camadaparede
+);
 
+if (bloqueios.Length > 0)
+{
+    Debug.Log("Local proibido!");
+    return;
+}
         GameObject novaTorre = Instantiate( torreSelecionada,posicao,Quaternion.identity);
 
     baseHealth.pontos -= custo;
@@ -78,5 +99,10 @@ public class SistemaDeConstrucao : MonoBehaviour
     Debug.Log("Pontos restantes: " + baseHealth.pontos);
 
     torreSelecionada = null;
-    }   
+    }  
+   private void OnDrawGizmos()
+{
+    Gizmos.color = Color.red;
+    Gizmos.DrawWireSphere(ultimaPosicao, raioColisao);
+}
 }
