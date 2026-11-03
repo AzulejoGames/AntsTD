@@ -20,6 +20,7 @@ public class BaseHealth : MonoBehaviour
     [SerializeField] private TMP_Text pontosText;
     public int pontos = 0;
 
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

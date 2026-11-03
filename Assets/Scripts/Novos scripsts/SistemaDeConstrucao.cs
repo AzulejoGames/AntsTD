@@ -3,7 +3,7 @@ using UnityEngine;
 public class SistemaDeConstrucao : MonoBehaviour
 {
     [SerializeField] private Camera cam;
-
+    [SerializeField] private PopupManager popupManager;
     private GameObject torreSelecionada;
     private InputCabeca inputCabeca;
     private BaseHealth baseHealth;
@@ -23,9 +23,12 @@ public class SistemaDeConstrucao : MonoBehaviour
     {
         torreSelecionada = torre;
 
-        Debug.Log("Torre selecionada: " + torre.name);
+        if (popupManager != null)
+        {
+            popupManager.MostrarAviso("Posicione a torre!", new Color(0.2f, 0.8f, 0.2f, 0.9f));
+        }
 
-      
+
     }
 
     private void OnEnable()
@@ -54,9 +57,9 @@ public class SistemaDeConstrucao : MonoBehaviour
     if (baseHealth.pontos < custo)
     {
         Debug.Log("Pontos insuficientes!");
-        Debug.Log("Pontos atuais: " + baseHealth.pontos);
-        Debug.Log("Custo da torre: " + custo);
-        return;
+            if (popupManager != null)
+                popupManager.MostrarAviso("Pontos insuficientes!", Color.red);
+            return;
     }
 
    Ray raio = cam.ScreenPointToRay(inputCabeca.PosicaoInput);
@@ -78,6 +81,8 @@ posicao.z = 0f;
         if (colisores.Length > 0)
         {
             Debug.Log("Muito perto de outra torre!");
+            if (popupManager != null)
+                popupManager.MostrarAviso("Muito perto de outra torre!", Color.red);
             return;
         }
   Collider2D[] bloqueios = Physics2D.OverlapCircleAll(
@@ -89,16 +94,17 @@ posicao.z = 0f;
 if (bloqueios.Length > 0)
 {
     Debug.Log("Local proibido!");
-    return;
+            if (popupManager != null)
+                popupManager.MostrarAviso("Local proibido para construção!", Color.red);
+            return;
 }
         GameObject novaTorre = Instantiate( torreSelecionada,posicao,Quaternion.identity);
 
     baseHealth.pontos -= custo;
+        if (popupManager != null)
+            popupManager.MostrarAviso("Torre construída com sucesso!", Color.green);
 
-    Debug.Log("Torre construída!");
-    Debug.Log("Pontos restantes: " + baseHealth.pontos);
-
-    torreSelecionada = null;
+        torreSelecionada = null;
     }  
    private void OnDrawGizmos()
 {
