@@ -98,7 +98,7 @@ public class WaveSpawner : MonoBehaviour
     void AtualizarUi()
     {
         // Exibe o cronômetro sem casas decimais (números inteiros) para melhor leitura na UI
-        WaveTimeText.text = $"Tempo entre Ondas: {Mathf.CeilToInt(cronometroRegressa)} segundos";
+        WaveTimeText.text = $"Enemy waves: {Mathf.CeilToInt(cronometroRegressa)} seconds";
         if (quantidadeWaves != null) 
         {
             quantidadeWaves.text = "Wave" + (indiceOndaAtual + 1);
