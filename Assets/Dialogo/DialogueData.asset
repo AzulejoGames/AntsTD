@@ -28,7 +28,7 @@ MonoBehaviour:
       para combate. No momento temos disponiveis dois tipos de combatentes, elas
       podem ser vista logo abaixo. "
   - name: Tutor
-    dialogueText: "Clique e a posicione no local pr\xF3ximo aos inimigos, cada formiga
+    dialogueText: "Clique e  a posicione no local pr\xF3ximo aos inimigos, cada formiga
       tem um custo pr\xF3prio, essas n\xE3o s\xE3o muito caras. Derrote inimigos
       e consiga mais n\xE9ctar para colocar mais formigas!"
   - name: Tutor
