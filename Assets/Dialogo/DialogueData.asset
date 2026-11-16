@@ -16,7 +16,55 @@ MonoBehaviour:
   - type: 0
     name: Tutor
     dialogueText: "Ol\xE1 novato! Est\xE1 \xE9 a formiga Guerreira. Ela vai para
-      cima do inimigo automaticamente "
+      cima do inimigo automaticamente, posicione duas delas no meio do caminho dos
+      invasores "
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+  - type: 2
+    name: Tutor
+    dialogueText: 
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+  - type: 2
+    name: Tutor
+    dialogueText: '
+
+'
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+  - type: 0
+    name: Tutor
+    dialogueText: "Muito bem! Agora veja ela entrando em a\xE7\xE3o contra os invasores\n"
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+  - type: 3
+    name: Tutor
+    dialogueText: '
+
+'
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+  - type: 0
+    name: Tutor
+    dialogueText: Muito Bem! Agora deixe eu te apresentar a nossa Atiradora. Ela
+      tem um longo alcance bem forte mais um pouco lenta
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+  - type: 0
+    name: Tutor
+    dialogueText: Posicione uma dela e coloque mais uma Guerreira no caminho
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+  - type: 2
+    name: Tutor
+    dialogueText: 
     action:
       m_PersistentCalls:
         m_Calls: []
@@ -28,7 +76,19 @@ MonoBehaviour:
         m_Calls: []
   - type: 0
     name: Tutor
-    dialogueText: "Muito bem! Agora veja ela entrando em a\xE7\xE3o contra os invasores\n"
+    dialogueText: "Perfeito!Agora veja elas em a\xE7\xE3o"
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+  - type: 3
+    name: Tutor
+    dialogueText: "Perfeito!Agora veja elas em a\xE7\xE3o"
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+  - type: 0
+    name: Tutor
+    dialogueText: "Muito Bem! Agora o resto \xE9 com voc\xEA, ven\xE7a!!"
     action:
       m_PersistentCalls:
         m_Calls: []
