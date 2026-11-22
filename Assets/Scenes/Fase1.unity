@@ -8444,7 +8444,7 @@ MonoBehaviour:
   corDano: {r: 1, g: 0, b: 0, a: 1}
   duracaoEfeito: 0.2
   intensidadeDano: 0.608
-  health: 1
+  health: 3
   healthText: {fileID: 8873605825122750856}
   cenaGameOver: GameOver
   pontosText: {fileID: 1603910114866326331}
@@ -9218,11 +9218,11 @@ Transform:
   m_GameObject: {fileID: 1377838702573475606}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -449, y: -246, z: 0}
+  m_LocalPosition: {x: 0, y: 6.6, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6202283919031362839}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &5974288339811676378
 RectTransform:
@@ -9304,7 +9304,6 @@ RectTransform:
   - {fileID: 4460621129032220718}
   - {fileID: 5974288339811676378}
   - {fileID: 2715112890933589629}
-  - {fileID: 5941148409524388605}
   - {fileID: 5706050862202703504}
   - {fileID: 4253174378470223046}
   - {fileID: 7968111897332626733}
@@ -10600,6 +10599,7 @@ SceneRoots:
   - {fileID: 323178831}
   - {fileID: 6202283919031362839}
   - {fileID: 3177411642132534173}
+  - {fileID: 5941148409524388605}
   - {fileID: 1036002187941290547}
   - {fileID: 2692619397789524971}
   - {fileID: 1064805239}
