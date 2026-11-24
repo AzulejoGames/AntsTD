@@ -445,8 +445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -16.568115}
-  m_SizeDelta: {x: 160, y: 80}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &563964421
 MonoBehaviour:
@@ -964,6 +964,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c76b4f5267f1641b1ab3f61369e0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrocaTela
+  audioSource: {fileID: 0}
+  somClique: {fileID: 0}
 --- !u!224 &6296307749620232940
 RectTransform:
   m_ObjectHideFlags: 0

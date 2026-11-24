@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   nectar: {fileID: 0}
+  dialogueController: {fileID: 0}
   audioDanoI: {fileID: -2691893717351232228}
   corDano: {r: 1, g: 0, b: 0, a: 1}
   duracaoEfeito: 0.2
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9730ccf388272f926831544dfe7a9cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDirection
-  moveSpeed: 3
+  moveSpeed: 2
   pontosCaminho: []
   somPassoI: {fileID: 8432845317345363566}
 --- !u!50 &2138139774320540006

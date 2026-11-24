@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9730ccf388272f926831544dfe7a9cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDirection
-  moveSpeed: 6
+  moveSpeed: 3.5
   pontosCaminho: []
   somPassoI: {fileID: 8432845317345363566}
 --- !u!50 &2138139774320540006

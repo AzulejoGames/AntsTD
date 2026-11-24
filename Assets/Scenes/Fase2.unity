@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 1560096963}
   - component: {fileID: 1560096962}
   m_Layer: 0
-  m_Name: arbusto_0
+  m_Name: arbusto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1457,7 +1457,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4491312292937690789, guid: e227fac1df4e7c7a18060763725f3742, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1478,7 +1478,7 @@ Transform:
   m_GameObject: {fileID: 1560096961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.2, y: 2.5, z: 0}
+  m_LocalPosition: {x: -11, y: 2.5, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9129,6 +9129,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   raioColisao: 0.4
+  limiteTorres: 12
 --- !u!1 &5595969182214907187
 GameObject:
   m_ObjectHideFlags: 0
@@ -9146,7 +9147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &5668086959282586063
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9687,7 +9688,7 @@ MonoBehaviour:
   coracao: {fileID: 4314694586151820009}
   corDano: {r: 1, g: 0, b: 0, a: 1}
   duracaoEfeito: 0.2
-  intensidadeDano: 0.5
+  intensidadeDano: 0.50175244
   health: 6
   healthText: {fileID: 7508772540248698502}
   cenaGameOver: GameOver
@@ -10292,6 +10293,7 @@ SceneRoots:
   - {fileID: 5569502105101663885}
   - {fileID: 4505751245757531727}
   - {fileID: 6987322406461489068}
+  - {fileID: 1560096963}
   - {fileID: 3515071921802185436}
   - {fileID: 589981093}
   - {fileID: 6127642383736509540}
@@ -10304,4 +10306,3 @@ SceneRoots:
   - {fileID: 1258225012}
   - {fileID: 1277614275}
   - {fileID: 936666597}
-  - {fileID: 1560096963}

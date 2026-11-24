@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections.Generic;
 public class SistemaDeConstrucao : MonoBehaviour
 {
     [SerializeField] private Camera cam;
@@ -13,6 +13,9 @@ public class SistemaDeConstrucao : MonoBehaviour
     [SerializeField] private LayerMask camadaTorres;
     [SerializeField] private LayerMask camadaparede;
     [SerializeField] private float raioColisao = 0.4f;
+    [SerializeField] private int limiteTorres = 10;
+
+    private List<GameObject> torresConstruidas = new List<GameObject>();
 
     private Vector3 ultimaPosicao;
 
@@ -52,13 +55,25 @@ public class SistemaDeConstrucao : MonoBehaviour
     {
         if (torreSelecionada == null)
             return;
+        // Remove referências de torres que já foram destruídas
+        torresConstruidas.RemoveAll(torre => torre == null);
 
+        // Verifica o limite de construções
+        if (torresConstruidas.Count >= limiteTorres)
+        {
+            Debug.Log("Limite de torres atingido!");
+
+            if (popupManager != null)
+                popupManager.MostrarAviso("Limite de torres atingido!", Color.red);
+
+            return;
+        }
         DadosFormigas dadosFormigas =
             torreSelecionada.GetComponent<DadosFormigas>();
 
         if (dadosFormigas == null)
         {
-            Debug.LogError("O prefab da torre não possui o componente DadosFormigas.");
+            
             return;
         }
 
@@ -66,7 +81,7 @@ public class SistemaDeConstrucao : MonoBehaviour
 
         if (baseHealth.pontos < custo)
         {
-            Debug.Log("Pontos insuficientes!");
+            
 
             if (popupManager != null)
                 popupManager.MostrarAviso("Pontos insuficientes!", Color.red);
@@ -95,8 +110,7 @@ public class SistemaDeConstrucao : MonoBehaviour
 
         if (colisores.Length > 0)
         {
-            Debug.Log("Muito perto de outra torre!");
-
+           
             if (popupManager != null)
                 popupManager.MostrarAviso("Muito perto de outra torre!", Color.red);
 
@@ -126,6 +140,7 @@ public class SistemaDeConstrucao : MonoBehaviour
             posicao,
             Quaternion.identity
         );
+        torresConstruidas.Add(novaTorre);
 
         baseHealth.pontos -= custo;
 

@@ -63,8 +63,10 @@ public class BaseHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Base destruída!");
-        SceneManager.LoadScene(cenaGameOver);
+        PlayerPrefs.SetString("UltimaCena", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene("GameOver");
     }
     
 }
