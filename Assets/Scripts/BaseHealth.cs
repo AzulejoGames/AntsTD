@@ -11,7 +11,7 @@ public class BaseHealth : MonoBehaviour
     [SerializeField] private float duracaoEfeito = 0.2f;
     [SerializeField, Range(0f, 1f)] private float intensidadeDano = 0.5f;
 
-
+    private Animator animator;
     [Header("Configurações da base")]
     
     [SerializeField] private int health = 10;
@@ -25,6 +25,7 @@ public class BaseHealth : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         corOriginal = spriteRenderer.color;
+        animator = GetComponent<Animator>();
     }
     public void  LateUpdate()
     {
@@ -66,7 +67,18 @@ public class BaseHealth : MonoBehaviour
         PlayerPrefs.SetString("UltimaCena", SceneManager.GetActiveScene().name);
         PlayerPrefs.Save();
 
-        SceneManager.LoadScene("GameOver");
+        StartCoroutine(GameOverCoroutine());
     }
-    
+    private IEnumerator GameOverCoroutine()
+    {
+        if (animator != null)
+        {
+            animator.SetBool("Morreu", true);
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene(cenaGameOver);
+    }
+
 }

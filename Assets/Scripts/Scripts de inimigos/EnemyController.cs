@@ -57,7 +57,7 @@ public class EnemyController : MonoBehaviour
         if (morreu)
             return;
 
-        Debug.Log("INIMIGO RECEBEU DANO: " + damage + " | VIDAS ANTES: " + vidas);
+      
 
         vidas -= damage;
 
@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour
 
         StartCoroutine(EfeitoDanoCouroutine());
 
-        Debug.Log("VIDAS AGORA: " + vidas);
+       
 
         if (vidas <= 0)
             Die();
@@ -85,7 +85,7 @@ public class EnemyController : MonoBehaviour
     {
         if (colidiu.CompareTag("base"))
         {
-            Debug.Log("Inimigo chegou na base");
+           
             Destroy(gameObject);
         }
     }

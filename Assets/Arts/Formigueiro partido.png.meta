@@ -219,7 +219,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -281,7 +281,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,7 +303,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,7 +325,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -347,7 +347,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -369,7 +369,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -391,7 +391,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -413,7 +413,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -435,7 +435,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -457,7 +457,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -479,7 +479,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -501,7 +501,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -523,7 +523,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -545,7 +545,7 @@ TextureImporter:
         width: 48
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -562,12 +562,12 @@ TextureImporter:
       name: Formigueiro partido_13
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 124
-        width: 27
-        height: 26
+        x: 2744
+        y: 0
+        width: 56
+        height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -584,790 +584,20 @@ TextureImporter:
       name: Formigueiro partido_14
       rect:
         serializedVersion: 2
-        x: 2783
-        y: 125
-        width: 15
-        height: 17
+        x: 2935
+        y: 0
+        width: 65
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d2439d5743a0daa70800000000000000
+      spriteID: 51e908664ba2a414ca966676261eabf9
       internalID: 8839732864029897773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_15
-      rect:
-        serializedVersion: 2
-        x: 2794
-        y: 138
-        width: 7
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: abe8f9c33ecfd1930800000000000000
-      internalID: 4115723687391366842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_16
-      rect:
-        serializedVersion: 2
-        x: 2958
-        y: 132
-        width: 27
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 990d29c1039f73a80800000000000000
-      internalID: -8487040987723280231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_17
-      rect:
-        serializedVersion: 2
-        x: 2983
-        y: 125
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e9f537fafc318080800000000000000
-      internalID: -9186994716272100893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_18
-      rect:
-        serializedVersion: 2
-        x: 2994
-        y: 138
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8916128d1ef05e970800000000000000
-      internalID: 8783444110924145048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_19
-      rect:
-        serializedVersion: 2
-        x: 2747
-        y: 100
-        width: 22
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 322a4603fcaf1deb0800000000000000
-      internalID: -4696697168593640925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_20
-      rect:
-        serializedVersion: 2
-        x: 2772
-        y: 107
-        width: 15
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5dbe980f331f28b20800000000000000
-      internalID: 3135333495984483285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_21
-      rect:
-        serializedVersion: 2
-        x: 2786
-        y: 53
-        width: 15
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9fe42c08891faa80800000000000000
-      internalID: -8453509903441137761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_22
-      rect:
-        serializedVersion: 2
-        x: 2938
-        y: 104
-        width: 22
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd6f692f5087a8980800000000000000
-      internalID: -8535878176787204387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_23
-      rect:
-        serializedVersion: 2
-        x: 2966
-        y: 109
-        width: 15
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8da41bdaefdb655b0800000000000000
-      internalID: -5379903803314058536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_24
-      rect:
-        serializedVersion: 2
-        x: 2987
-        y: 99
-        width: 13
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9b5783faf0bda4370800000000000000
-      internalID: 8307693323049006521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_25
-      rect:
-        serializedVersion: 2
-        x: 2995
-        y: 113
-        width: 5
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 134a2d2566cfcfbb0800000000000000
-      internalID: -4900764778079542223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_26
-      rect:
-        serializedVersion: 2
-        x: 2748
-        y: 84
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1b032762822f1ca0800000000000000
-      internalID: -6044074231436473573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_27
-      rect:
-        serializedVersion: 2
-        x: 2765
-        y: 61
-        width: 25
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 23aaf0437fba97900800000000000000
-      internalID: 682765896742054450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_28
-      rect:
-        serializedVersion: 2
-        x: 2934
-        y: 66
-        width: 19
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e0d4bb41102dde6f0800000000000000
-      internalID: -653635468814234354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_29
-      rect:
-        serializedVersion: 2
-        x: 2951
-        y: 88
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 30c6e74e65929bab0800000000000000
-      internalID: -4991913258786067453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_30
-      rect:
-        serializedVersion: 2
-        x: 2969
-        y: 80
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b6bc69bd9f1af4d0800000000000000
-      internalID: -3100130631209929039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_31
-      rect:
-        serializedVersion: 2
-        x: 2976
-        y: 92
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 465e214afe1e1c680800000000000000
-      internalID: -8736453382755916444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_32
-      rect:
-        serializedVersion: 2
-        x: 2986
-        y: 76
-        width: 14
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2f95559a4ba1ece0800000000000000
-      internalID: -1377631674177315027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_33
-      rect:
-        serializedVersion: 2
-        x: 2744
-        y: 61
-        width: 19
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e9fa1cba09e6a160800000000000000
-      internalID: 7036567700127807976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_34
-      rect:
-        serializedVersion: 2
-        x: 2955
-        y: 59
-        width: 21
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72d8d785ea2d45420800000000000000
-      internalID: 2617948929659866407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_35
-      rect:
-        serializedVersion: 2
-        x: 2978
-        y: 69
-        width: 14
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 334e753526787b090800000000000000
-      internalID: -8018791755135065037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_36
-      rect:
-        serializedVersion: 2
-        x: 2990
-        y: 53
-        width: 10
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f578290b217cc3c80800000000000000
-      internalID: -8341573526711269537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_37
-      rect:
-        serializedVersion: 2
-        x: 2744
-        y: 37
-        width: 20
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1cfabf49af95dfa40800000000000000
-      internalID: 5403574060690681793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_38
-      rect:
-        serializedVersion: 2
-        x: 2751
-        y: 22
-        width: 19
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 67867b53fb066f0b0800000000000000
-      internalID: -5695258304407181194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_39
-      rect:
-        serializedVersion: 2
-        x: 2769
-        y: 17
-        width: 29
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 001a05327cc87dee0800000000000000
-      internalID: -1236364785771044608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_40
-      rect:
-        serializedVersion: 2
-        x: 2938
-        y: 40
-        width: 20
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74c6645f0a3dcdad0800000000000000
-      internalID: -2676031390301655993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_41
-      rect:
-        serializedVersion: 2
-        x: 2949
-        y: 22
-        width: 19
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c2edf02877a2b890800000000000000
-      internalID: -7443703099698584888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_42
-      rect:
-        serializedVersion: 2
-        x: 2968
-        y: 26
-        width: 29
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b70756dd6e88640a0800000000000000
-      internalID: -6897675254133067653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_43
-      rect:
-        serializedVersion: 2
-        x: 2758
-        y: 0
-        width: 24
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1773410b4a181bd70800000000000000
-      internalID: 9057162869947512689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_44
-      rect:
-        serializedVersion: 2
-        x: 2772
-        y: 13
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 73c9ffefe2cf534d0800000000000000
-      internalID: -3155338685126304713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_45
-      rect:
-        serializedVersion: 2
-        x: 2788
-        y: 0
-        width: 13
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3b4591610e3d66710800000000000000
-      internalID: 1686268069893723315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_46
-      rect:
-        serializedVersion: 2
-        x: 2955
-        y: 0
-        width: 23
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d64bdff86df9d97a0800000000000000
-      internalID: -6368758554144426899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_47
-      rect:
-        serializedVersion: 2
-        x: 2971
-        y: 10
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb22c55360b8e6ca0800000000000000
-      internalID: -6021722792966479170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_48
-      rect:
-        serializedVersion: 2
-        x: 2972
-        y: 14
-        width: 15
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6aeaedca23b0873b0800000000000000
-      internalID: -5514645431438627162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Formigueiro partido_49
-      rect:
-        serializedVersion: 2
-        x: 2988
-        y: 0
-        width: 12
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 834548e683e023040800000000000000
-      internalID: 4625775402798044216
       vertices: []
       indices: 
       edges: []
@@ -1376,7 +606,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7fbad0be024a6a24d8669501808383ee
     internalID: 0
     vertices: []
     indices: 
@@ -1432,6 +662,7 @@ TextureImporter:
       Formigueiro partido_48: -5514645431438627162
       Formigueiro partido_49: 4625775402798044216
       Formigueiro partido_5: -1467963708448477066
+      Formigueiro partido_50: -1927729076
       Formigueiro partido_6: -6021312700296588187
       Formigueiro partido_7: 1484275666574531424
       Formigueiro partido_8: 4519726321341263017
