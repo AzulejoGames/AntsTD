@@ -19,6 +19,12 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float duracaoEfeito = 0.2f;
     [SerializeField, Range(0f, 1f)] private float intensidadeDano = 0.5f;
 
+    [Header("Tremor da Câmera")]
+    [SerializeField] private float shakeDanoIntensidade = 0.15f;
+    [SerializeField] private float shakeDanoDuracao = 0.12f;
+    [SerializeField] private float shakeMorteIntensidade = 0.6f;
+    [SerializeField] private float shakeMorteDuracao = 0.5f;
+
     [Tooltip("vidas do inimigo")]
     [SerializeField] private int vidas = 3;
 
@@ -60,7 +66,7 @@ public class EnemyController : MonoBehaviour
       
 
         vidas -= damage;
-
+        CameraShake.Instance?.Shake(shakeDanoIntensidade, shakeDanoDuracao);
         if (audioDanoI != null)
             audioDanoI.PlayOneShot(audioDanoI.clip);
 
@@ -97,7 +103,7 @@ public class EnemyController : MonoBehaviour
             return;
 
         morreu = true;
-
+        CameraShake.Instance?.Shake(shakeMorteIntensidade, shakeMorteDuracao);
         if (audioDanoI != null)
             audioDanoI.PlayOneShot(audioDanoI.clip);
 
@@ -108,11 +114,11 @@ public class EnemyController : MonoBehaviour
             if (nectar)
                 nectar.Recebeu();
 
-            Debug.Log("Pontos adicionados à base. Pontos atuais: " + baseAlvo.pontos);
+           
         }
         else
         {
-            Debug.LogWarning("BaseHealth não encontrado pelo inimigo!");
+           
         }
 
         if (gameManager != null)

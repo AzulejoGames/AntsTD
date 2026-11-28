@@ -11,6 +11,11 @@ public class BaseHealth : MonoBehaviour
     [SerializeField] private float duracaoEfeito = 0.2f;
     [SerializeField, Range(0f, 1f)] private float intensidadeDano = 0.5f;
 
+    [Header("Tremor da Câmera")]
+    [SerializeField] private float shakeDanoIntensidade = 0.15f;
+    [SerializeField] private float shakeDanoDuracao = 0.12f;
+    [SerializeField] private float shakeMorteIntensidade = 0.6f;
+    [SerializeField] private float shakeMorteDuracao = 0.5f;
     private Animator animator;
     [Header("Configurações da base")]
     
@@ -47,6 +52,10 @@ public class BaseHealth : MonoBehaviour
             {
                 Die();
             }
+            else
+            {
+                CameraShake.Instance?.Shake(shakeDanoIntensidade, shakeDanoDuracao);
+            }
         }
     }
     IEnumerator EfeitoDanoCouroutine()
@@ -64,6 +73,7 @@ public class BaseHealth : MonoBehaviour
 
     private void Die()
     {
+        CameraShake.Instance?.Shake(shakeMorteIntensidade, shakeMorteDuracao);
         PlayerPrefs.SetString("UltimaCena", SceneManager.GetActiveScene().name);
         PlayerPrefs.Save();
 
